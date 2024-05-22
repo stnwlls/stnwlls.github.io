@@ -14,3 +14,9 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
+
+- 🔭 I’m currently working on mastering my web development skills as a student at South Mountain Community College in Phoenix, Arizona
+- 🌱 I’m currently learning CSS
+- 📫 How to reach me: aus2172957@maricopa.edu
+- 😄 Pronouns: He/Him/His
+- ⚡ Fun fact: I'm originally from Burlington, Vermont
