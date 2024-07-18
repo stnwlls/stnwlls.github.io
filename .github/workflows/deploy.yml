@@ -11,10 +11,15 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3  # Updated to v3 for compatibility
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16' 
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4  # Updated to v4 for compatibility
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./  # Adjust this if your build output is in a different directory
+          publish_dir: ./  
