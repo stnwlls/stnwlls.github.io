@@ -1,13 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const video = document.getElementById('introVideo');
-    const content = document.getElementById('content');
+    const video = document.querySelector('.intro-video');
+    const content = document.querySelector('.content');
+    const videoContainer = document.querySelector('.video-container');
 
     video.addEventListener('ended', () => {
-        video.classList.add('fade-out');
+        videoContainer.classList.add('fade-out');
         setTimeout(() => {
-            video.style.display = 'none';
+            videoContainer.style.display = 'none';
             content.classList.remove('hidden');
-            document.body.style.overflow = 'auto'; // Allow scrolling after video
-        }, 1000); // Adjust the timeout to match the fade-out duration
+            content.style.display = 'block';
+            document.body.style.overflow = 'auto';
+        }, 1000);
     });
 });
