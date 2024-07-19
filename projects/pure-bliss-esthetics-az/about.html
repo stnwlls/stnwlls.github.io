@@ -42,6 +42,24 @@
 		</ul>
 		<a href="https://www.schedulicity.com/scheduling/PBEDYY" target="_blank" class="book-link">BOOK WITH ME</a>
 	</nav>
+
+	<!-- Mobile NavBar -->
+	<nav class="mobile-navBar">
+		<a href="index.html" class="logo-link" style="text-decoration: none; color: #f2f2f2;">
+		  <img class="logo" src="images/pureblissNavLogo.png" alt="Pure Bliss Esthetics Logo"/>
+		</a>
+		<div class="hamburger-menu" onclick="toggleMobileMenu()">
+		  <i class="fa fa-bars"></i>
+		</div>
+		<ul class="mobile-nav-links">
+		  <li><a class="nav-link" href="index.html">Home</a></li>
+		  <li><a class="nav-link" href="services.html">Services</a></li>
+		  <li><a class="nav-link" href="shop.html">Shop</a></li>
+		  <li><a class="nav-link active" href="about.html">About</a></li>
+		  <li><a class="nav-link" href="contact.html">Contact</a></li>
+		  <li><a href="https://www.schedulicity.com/scheduling/PBEDYY" target="_blank" class="book-link">BOOK WITH ME</a></li>
+		</ul>
+	  </nav>
 	
 	<main class="content">
 		<section class="content-section" style="padding-top: 80px;">
@@ -65,13 +83,6 @@
 			</div>
 		</section>
 	</main>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
 	<br>
 	
 	<!-- Footer -->
@@ -99,5 +110,12 @@
 			</div>
 		</div>
 	</footer>
+	
+	<script>
+		function toggleMobileMenu() {
+			var links = document.querySelector('.mobile-nav-links');
+			links.classList.toggle('active');
+		}
+	</script>
 </body>
 </html>

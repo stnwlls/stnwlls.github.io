@@ -26,7 +26,7 @@
 <body>
     <!-- NavBar -->
     <nav class="navBar">
-        <a href="../index.html" class="logo-link" style="text-decoration: none; color: #f2f2f2;">
+        <a href="../index.html" class="logo-link">
             <img class="logo" src="../images/pureblissNavLogo.png" alt="Pure Bliss Esthetics Logo"/>
         </a>
         <ul class="nav-links">
@@ -54,6 +54,24 @@
             <li><a class="nav-link" href="../contact.html">Contact</a></li>
         </ul>
         <a href="https://www.schedulicity.com/scheduling/PBEDYY" target="_blank" class="book-link">BOOK WITH ME</a>
+    </nav>
+    
+    <!-- Mobile NavBar -->
+    <nav class="mobile-navBar">
+        <a href="../index.html" class="logo-link">
+            <img class="logo" src="../images/pureblissNavLogo.png" alt="Pure Bliss Esthetics Logo"/>
+        </a>
+        <div class="hamburger-menu" onclick="toggleMobileMenu()">
+            <i class="fa fa-bars"></i>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a class="nav-link" href="../index.html">Home</a></li>
+            <li><a class="nav-link active" href="../services.html">Services</a></li>
+            <li><a class="nav-link" href="../shop.html">Shop</a></li>
+            <li><a class="nav-link" href="../about.html">About</a></li>
+            <li><a class="nav-link" href="../contact.html">Contact</a></li>
+            <li><a href="https://www.schedulicity.com/scheduling/PBEDYY" target="_blank" class="book-link">BOOK WITH ME</a></li>
+        </ul>
     </nav>
     
     <section class="skincare-hero">
@@ -273,5 +291,12 @@
             </div>
         </div>
     </footer>
+    
+    <script>
+        function toggleMobileMenu() {
+            var links = document.querySelector('.mobile-nav-links');
+            links.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
