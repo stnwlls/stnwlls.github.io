@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pure Bliss Esthetics | Services - Skin Care</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script>
+        function toggleDescription(id) {
+            const element = document.getElementById(id);
+            const button = document.getElementById(`button-${id}`);
+            if (element.style.display === "none") {
+                element.style.display = "block";
+                button.innerText = "View Less";
+            } else {
+                element.style.display = "none";
+                button.innerText = "View More";
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- NavBar -->
+    <nav class="navBar">
+        <a href="../index.html" class="logo-link" style="text-decoration: none; color: #f2f2f2;">
+            <img class="logo" src="../images/pureblissNavLogo.png" alt="Pure Bliss Esthetics Logo"/>
+        </a>
+        <ul class="nav-links">
+            <li><a class="nav-link" href="../index.html">Home</a></li>
+            <li class="dropdown">
+                <a class="nav-link dropbtn active" href="../services.html">Services</a>
+                <div class="spacer"></div>
+                <div class="dropdown-content">
+                    <a href="../services/skincare.html">Skin Care</a>
+                    <a href="../services/waxing.html">Waxing</a>
+                    <a href="../services/other.html">Other</a>
+                    <a href="../services/add-ons.html">Add-Ons</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a class="nav-link dropbtn" href="../shop.html">Shop</a>
+                <div class="dropdown-content">
+                    <a href="https://eminenceorganics.com/spalink/UFVSMTE4" target="_blank">Shop Eminence</a>
+                    <a href="https://liraclinical.com/" target="_blank">Shop Lira</a>
+                    <a href="http://www.glymedplus.com/store/0026355" target="_blank">Shop Glymed</a>
+                    <a href="http://s.thegiftcardcafe.com/29edQz" target="_blank">Purchase Gift Certificate</a>
+                </div>
+            </li>
+            <li><a class="nav-link" href="../about.html">About</a></li>
+            <li><a class="nav-link" href="../contact.html">Contact</a></li>
+        </ul>
+        <a href="https://www.schedulicity.com/scheduling/PBEDYY" target="_blank" class="book-link">BOOK WITH ME</a>
+    </nav>
+    
+    <section class="skincare-hero">
+    </section>
+    
+    <!-- SERVICES -->
+    <main class="services-sub-content">
+        <section class="services-sub-container">
+            <div class="service-sub">
+                <h2>Celluma Light Therapy Session<br><b>30 min - $20</b></h2>
+                <p class="description">Relax under LED light for 30 minutes, which helps improve mood and calm the nervous system. Can include a hand and arm massage.</p>
+                <p id="more-light-therapy" class="more-description" style="display: none;">Enjoy a calming 30-minute LED light therapy session designed to harmonize with the moment you are in. This practice not only calms your nervous system and improves your mood but also brings about a greater sense of peace. While you lay under the LED light, you can also enjoy a soothing hand and arm massage.</p>
+                <button id="button-more-light-therapy" class="view-more" onclick="toggleDescription('more-light-therapy')">View More</button>
+                <a href="https://www.schedulicity.com/scheduling/PBEDYY" target="_blank" class="book-link-sub">Book</a>
+            </div>
+            <div class="service-sub">
+                <h2>Just a Dermaplane<br><b>30 min - $30</b></h2>
+                <p class="description">Exfoliate your skin and remove peach fuzz for a smoother, brighter complexion. Recommended every 4-6 weeks.</p>
+                <p id="more-dermaplane" class="more-description" style="display: none;">This service provides a great method of exfoliation that removes dead skin build-up and peach fuzz, leaving you with a smoother, brighter complexion. Recommended every 4-6 weeks. Note that this service is just the dermaplane, without any additional treatments like enzymatic treatments, massages, or masks. You can add a hydro jelly mask for an extra glow and boost of nutrients/hydration for only $25.</p>
+                <button id="button-more-dermaplane" class="view-more" onclick="toggleDescription('more-dermaplane')">View More</button>
+                <a href="https://www.schedulicity.com/scheduling/PBEDYY" target="_blank" class="book-link-sub">Book</a>
+            </div>
+            <div class="service-sub">
+                <h2>Dermaplane + Hydrojelly Mask<br><b>35 min - $55</b></h2>
+                <p class="description">Cleanse, exfoliate, and rejuvenate with a hydro jelly mask.</p>
+                <p id="more-dermaplane-hydro" class="more-description" style="display: none;">This service includes a thorough cleanse followed by a dermaplane exfoliation. Afterwards, enjoy the benefits of a hydro jelly mask that will sit for 15-20 minutes to deeply nourish and hydrate your skin. Note that this service does not include a full facial.</p>
+                <button id="button-more-dermaplane-hydro" class="view-more" onclick="toggleDescription('more-dermaplane-hydro')">View More</button>
+                <a href="https://www.schedulicity.com/scheduling/PBEDYY" target="_blank" class="book-link-sub">Book</a>
+            </div>
+            <div class="service-sub">
+                <h2>Mini Facial + Hydrojelly Peel Off Mask<br><b>45 min - $100</b></h2>
+                <p class="description">A sped-up version of a custom 60-minute facial without extractions or massage.</p>
+                <p id="more-mini-facial-hydro" class="more-description" style="display: none;">Experience a quick and efficient mini facial that includes a double cleanse, exfoliation, and a hydro jelly peel-off mask. This service skips the extractions and massage to provide a faster yet effective facial treatment.</p>
+                <button id="button-more-mini-facial-hydro" class="view-more" onclick="toggleDescription('more-mini-facial-hydro')">View More</button>
+                <a href="https://www.schedulicity.com/scheduling/PBEDYY" target="_blank" class="book-link-sub">Book</a>
+            </div>
+            <div class="service-sub">
+                <h2>Mini Facial<br><b>40 min - $85</b></h2>
+                <p class="description">Double cleanse, exfoliation, minimal extractions, enzyme mask, and hand massage.</p>
+                <p id="more-mini-facial" class="more-description" style="display: none;">The mini facial includes a double cleanse, exfoliation, minimal extractions, an enzyme mask, and a relaxing hand massage. It's perfect for pre-teens or first-timers who want a gentle introduction to facial treatments.</p>
+                <button id="button-more-mini-facial" class="view-more" onclick="toggleDescription('more-mini-facial')">View More</button>
+                <a href="https://www.schedulicity.com/scheduling/PBEDYY" target="_blank" class="book-link-sub">Book</a>
+            </div>            
+            <div class="service-sub">
+                <h2>Massage Focused Mini Facial<br><b>45 min - $70</b></h2>
+                <p class="description">Refresh your skin and soul with a massage-focused facial using natural botanical oils and ingredients.</p>
+                <p id="more-massage-mini-facial" class="more-description" style="display: none;">This service provides a refreshing boost for your skin and soul with a massage-focused experience that can be done weekly. It lifts and tones the face and neck by stimulating blood flow and circulation using natural botanical oils and ingredients. A mask and LED therapy (red or blue light depending on your skin concerns) are incorporated while you receive a soothing hand and arm massage. Note that this service does not include serums, exfoliation, or enzymes. For a deep cleanse and exfoliation, consider the custom 1-hour or 90-minute facial.</p>
+                <button id="button-more-massage-mini-facial" class="view-more" onclick="toggleDescription('more-massage-mini-facial')">View More</button>
+                <a href="https://www.schedulicity.com/scheduling/PBEDYY" target="_blank" class="book-link-sub">Book</a>
+            </div>
+            <div class="service-sub">
+                <h2>Mini Facial + Celluma Light Therapy Session<br><b>60 min - $90</b></h2>
+                <p class="description">Improve cellular health and enhance facial product penetration with LED therapy after a mini facial.</p>
+                <p id="more-mini-facial-light-therapy" class="more-description" style="display: none;">This service combines a mini facial with a Celluma Light Therapy session. LED therapy improves cellular health by accelerating the repair process and replenishing damaged skin cells. It reduces wrinkles, boosts collagen, and diminishes hyperpigmentation. This therapy enhances the penetration of topical products applied during the facial. Choose from three settings: acne, anti-aging, or pain relief.</p>
+                <button id="button-more-mini-facial-light-therapy" class="view-more" onclick="toggleDescription('more-mini-facial-light-therapy')">View More</button>
+                <a href="https://www.schedulicity.com/scheduling/PBEDYY" target="_blank" class="book-link-sub">Book</a>
+            </div>
+            <div class="service-sub">
+                <h2>Gemstone Facial<br><b>30 min - $100</b></h2>
+                <p class="description">Cleanse and energize your skin with gemstone-infused products.</p>
+                <p id="more-gemstone-facial" class="more-description" style="display: none;">A quick pick-me-up for all skin types, this facial deeply cleanses and energizes your skin using gemstone-infused products. The treatment includes a charcoal exfoliating gel cleanser (with malachite), turmeric energizing treatment (with citrine), and a nourishing camellia glow solid facial oil (with rose quartz). Enjoy a light massage and hot towel application for a refreshing experience. Add-ons like dermaplane, microderm, LED session, extra massage, or hydro jelly mask are available.</p>
+                <button id="button-more-gemstone-facial" class="view-more" onclick="toggleDescription('more-gemstone-facial')">View More</button>
+                <a href="https://www.schedulicity.com/scheduling/PBEDYY" target="_blank" class="book-link-sub">Book</a>
+            </div>
+            <div class="service-sub">
+                <h2>Custom 1 Hour Facial<br><b>60 min - $100</b></h2>
+                <p class="description">Completely customized facial with organic products, including deep cleanse, exfoliation, extractions, and more.</p>
+                <p id="more-custom-facial" class="more-description" style="display: none;">Indulge in a relaxing, fully customized facial using certified organic, natural products. The treatment includes a deep cleanse, exfoliation, extractions, skin analysis, enzymatic treatment, and mask(s), with optional LED therapy for enhanced results.</p>
+                <button id="button-more-custom-facial" class="view-more" onclick="toggleDescription('more-custom-facial')">View More</button>
+                <a href="https://www.schedulicity.com/scheduling/PBEDYY" target="_blank" class="book-link-sub">Book</a>
+            </div>
+            <div class="service-sub">
+                <h2>Custom 1 Hour Facial with Dermaplane<br><b>60 min - $105</b></h2>
+                <p class="description">All the benefits of the custom 1-hour facial, plus a dermaplane exfoliation.</p>
+                <p id="more-custom-facial-dermaplane" class="more-description" style="display: none;">This service combines the benefits of the custom 1-hour facial with a dermaplane exfoliation. Enjoy a deep cleanse, exfoliation, extractions, skin analysis, enzymatic treatment, mask(s), and the added smoothing and brightening effects of dermaplaning.</p>
+                <button id="button-more-custom-facial-dermaplane" class="view-more" onclick="toggleDescription('more-custom-facial-dermaplane')">View More</button>
+                <a href="https://www.schedulicity.com/scheduling/PBEDYY" target="_blank" class="book-link-sub">Book</a>
+            </div>
+            <div class="service-sub">
+                <h2>Custom 1 Hour Facial with Microderm<br><b>60 min - $105</b></h2>
+                <p class="description">Custom facial with microdermabrasion for enhanced exfoliation and circulation.</p>
+                <p id="more-custom-facial-microderm" class="more-description" style="display: none;">This service includes a custom 1-hour facial with the added benefits of microdermabrasion. Microdermabrasion exfoliates the skin and stimulates circulation through suction and buffing, enhancing the overall facial treatment.</p>
+                <button id="button-more-custom-facial-microderm" class="view-more" onclick="toggleDescription('more-custom-facial-microderm')">View More</button>
+                <a href="https://www.schedulicity.com/scheduling/PBEDYY" target="_blank" class="book-link-sub">Book</a>
+            </div>
+            <div class="service-sub">
+                <h2>Custom 1 Hour Facial + Hydrojelly Peel-Off Mask<br><b>60 min - $115</b></h2>
+                <p class="description">Custom facial with a hydrojelly mask for additional hydration and nourishment.</p>
+                <p id="more-custom-facial-hydrojelly" class="more-description" style="display: none;">This service includes all the benefits of the custom 1-hour facial plus a hydrojelly mask at the end. The facial uses certified organic natural products for deep cleansing, exfoliation, extractions, skin analysis, enzymatic treatment, and mask(s), followed by a hydrating and nourishing hydrojelly mask.</p>
+                <button id="button-more-custom-facial-hydrojelly" class="view-more" onclick="toggleDescription('more-custom-facial-hydrojelly')">View More</button>
+                <a href="https://www.schedulicity.com/scheduling/PBEDYY" target="_blank" class="book-link-sub">Book</a>
+            </div>
+            <div class="service-sub">
+                <h2>Advanced Acne Treatment<br><b>70 min - $110</b></h2>
+                <p class="description">Botanical-rich facial to treat acne, incorporating blue LED therapy and high frequency.</p>
+                <p id="more-advanced-acne-treatment" class="more-description" style="display: none;">Treat your acne naturally with this advanced facial packed with organic ingredients. The treatment addresses acne conditions like excess oil, hyperpigmentation, and scarring. Encapsulated salicylic acid deeply cleanses pores and prevents future congestion. The service includes blue LED therapy, a blue light spot diminishing mask, and high frequency for enhanced acne treatment.</p>
+                <button id="button-more-advanced-acne-treatment" class="view-more" onclick="toggleDescription('more-advanced-acne-treatment')">View More</button>
+                <a href="https://www.schedulicity.com/scheduling/PBEDYY" target="_blank" class="book-link-sub">Book</a>
+            </div>
+            <div class="service-sub">
+                <h2>Custom 90 Minute Facial<br><b>90 min - $125</b></h2>
+                <p class="description">Extensive facial with multiple treatments, including dermaplane or microderm, LED therapy, and a hydrojelly mask.</p>
+                <p id="more-custom-90min-facial" class="more-description" style="display: none;">Center yourself or take a nap for 90 minutes with this extensive facial. It includes a double cleanse, exfoliation, dermaplane or microderm (depending on skin conditions), full LED session, enzymes, mask, and shoulder, hand, and arm massage. A hydrojelly mask and a full 30-minute LED session are also part of this comprehensive service.</p>
+                <button id="button-more-custom-90min-facial" class="view-more" onclick="toggleDescription('more-custom-90min-facial')">View More</button>
+                <a href="https://www.schedulicity.com/scheduling/PBEDYY" target="_blank" class="book-link-sub">Book</a>
+            </div>
+            <div class="service-sub">
+                <h2>Peptide Perfection Peel + Red Light Therapy<br><b>60 min - $125</b></h2>
+                <p class="description">Enhance cellular turnover with a peptide perfection peel suitable for all skin types, followed by red light therapy.</p>
+                <p id="more-peptide-peel-red-light" class="more-description" style="display: none;">The Glymed Peptide Perfection Peel enhances cellular turnover and improves signs of aging, sun damage, acne, and scarring. Suitable for all skin types, this peel includes key ingredients like mandelic acid, malic acid, lactic acid, and peptides. The treatment also incorporates red light therapy for enhanced results. Avoid sun exposure and active ingredients for a week post-treatment.</p>
+                <button id="button-more-peptide-peel-red-light" class="view-more" onclick="toggleDescription('more-peptide-peel-red-light')">View More</button>
+                <a href="https://www.schedulicity.com/scheduling/PBEDYY" target="_blank" class="book-link-sub">Book</a>
+            </div>            
+            <div class="service-sub">
+                <h2>Biorepeel (35% TCA Peel)<br><b>50 min - $185</b></h2>
+                <p class="description">A cutting-edge Italian-made 35% TCA peel with minimal downtime. It improves skin texture, addresses aging signs, and evens pigmentation.</p>
+                <p id="more-biorepeel" class="more-description" style="display: none;">The Biorepeel is a revolutionary 35% TCA peel that enhances skin surface, diminishes imperfections, and accelerates cell turnover by stimulating collagen and elastin deep within the skin layers. With minimal to zero skin shedding or downtime, the results are instant and continue to improve over the following week. This treatment targets skin texture, scarring, discoloration, and congested pores using a potent TCA solution, salicylic acid, tartaric acid, and lactobionic acid. Additionally, amino acids and antioxidant vitamins, including vitamins C and B2, combat free radicals and environmental stressors. Optimal results are achieved with a series of three treatments every 7-10 days. Discontinue use of active ingredients for a week post-treatment and avoid sun exposure for a few days.</p>
+                <button id="button-more-biorepeel" class="view-more" onclick="toggleDescription('more-biorepeel')">View More</button>
+                <a href="https://www.schedulicity.com/scheduling/PBEDYY" target="_blank" class="book-link-sub">Book</a>
+            </div>
+            <div class="service-sub">
+                <h2>Biorepeel 3 Pack (Save $100)<br><b>45 min - $444</b></h2>
+                <p class="description">A series of three Biorepeel treatments every 7-10 days for optimal results, saving $100.</p>
+                <p id="more-biorepeel-pack" class="more-description" style="display: none;">Achieve the best outcomes with a series of three Biorepeel treatments spaced 7-10 days apart. This innovative Italian-made 35% TCA peel offers minimal downtime and significant improvements in skin texture, imperfections, and signs of aging. The peel accelerates cell turnover by stimulating the reconstruction of collagen and elastin deep within the skin. Results are immediate and continue to enhance over the following week. Key components include potent TCA for targeting skin texture and discoloration, salicylic acid for congested pores, tartaric acid for natural brightening, and lactobionic acid for boosting intercellular metabolism. Amino acids and antioxidant vitamins C and B2 fight free radicals and environmental stressors.</p>
+                <button id="button-more-biorepeel-pack" class="view-more" onclick="toggleDescription('more-biorepeel-pack')">View More</button>
+                <a href="https://www.schedulicity.com/scheduling/PBEDYY" target="_blank" class="book-link-sub">Book</a>
+            </div>
+            <div class="service-sub">
+                <h2>Ultra Age Corrective Facial<br><b>90 min - $145</b></h2>
+                <p class="description">An anti-aging powerhouse facial that plumps, hydrates, and smooths the skin using botanical peptides and collagen-boosting actives.</p>
+                <p id="more-age-corrective" class="more-description" style="display: none;">The Ultra Age Corrective Facial is designed to plump, hydrate, and smooth your skin with botanical peptides, collagen-boosting actives, and globally-sourced algae extracts. This facial reduces fine lines and wrinkles by recalibrating collagen synthesis to encourage the formation of high-quality 'smart' collagen. Ideal for all skin types, this treatment increases blood flow and lymphatic drainage through massage, leaving your complexion youthful and radiant. LED light therapy is incorporated throughout the treatment for enhanced results.</p>
+                <button id="button-more-age-corrective" class="view-more" onclick="toggleDescription('more-age-corrective')">View More</button>
+                <a href="https://www.schedulicity.com/scheduling/PBEDYY" target="_blank" class="book-link-sub">Book</a>
+            </div>
+            <div class="service-sub">
+                <h2>Back Treatment (A Facial on Your Back!)<br><b>60 min - $135</b></h2>
+                <p class="description">A relaxing and deeply cleansing treatment for your back that reduces signs of aging, moisturizes, and rejuvenates the skin.</p>
+                <p id="more-back-treatment" class="more-description" style="display: none;">Often neglected, the back deserves as much attention as the face. This back treatment includes thorough cleansing, exfoliation, and extractions if needed, followed by a massage for the back, shoulders, and arms. A mask is applied to stimulate elasticity and rejuvenate the skin. This treatment reduces signs of aging, moisturizes, and leaves your back feeling refreshed and revitalized.</p>
+                <button id="button-more-back-treatment" class="view-more" onclick="toggleDescription('more-back-treatment')">View More</button>
+                <a href="https://www.schedulicity.com/scheduling/PBEDYY" target="_blank" class="book-link-sub">Book</a>
+            </div>
+            <div class="service-sub">
+                <h2>Microneedling + LED<br><b>80 min - $180</b></h2>
+                <p class="description">A treatment that stimulates collagen production, tightens, and brightens the skin. Pre and post-care instructions are provided.</p>
+                <p id="more-microneedling-led" class="more-description" style="display: none;">Microneedling combined with LED therapy helps fight aging by stimulating collagen production, tightening, and brightening the skin. Before the treatment, a mini facial is booked to go over the client’s health history, pre and post-care instructions, and to pick an appointment date. Post-treatment care includes avoiding the gym, sun, swimming, sweating, itching, and rubbing the face for 24-48 hours. Current skincare products should be discontinued, using hyaluronic acid or the provided aftercare kit while the face heals. Normal skincare routine can be resumed after 4-5 days, avoiding exfoliation for at least a week post-needling.</p>
+                <button id="button-more-microneedling-led" class="view-more" onclick="toggleDescription('more-microneedling-led')">View More</button>
+                <a href="https://www.schedulicity.com/scheduling/PBEDYY" target="_blank" class="book-link-sub">Book</a>
+            </div>
+            <div class="service-sub">
+                <h2>Microneedling + LED with Dermaplane<br><b>90 min - $195</b></h2>
+                <p class="description">A comprehensive treatment that includes microneedling, LED therapy, and dermaplaning for enhanced skin rejuvenation.</p>
+                <p id="more-microneedling-dermaplane" class="more-description" style="display: none;">This treatment combines the benefits of microneedling, LED therapy, and dermaplaning. Microneedling stimulates collagen production, tightens, and brightens the skin, while dermaplaning removes dead skin cells and peach fuzz for a smoother complexion. Pre and post-care instructions include avoiding the gym, sun, swimming, sweating, itching, and rubbing the face for 24-48 hours. Discontinue current skincare products, using hyaluronic acid or the provided aftercare kit while the face heals. Normal skincare routine can be resumed after 4-5 days, avoiding exfoliation for at least a week post-needling.</p>
+                <button id="button-more-microneedling-dermaplane" class="view-more" onclick="toggleDescription('more-microneedling-dermaplane')">View More</button>
+                <a href="https://www.schedulicity.com/scheduling/PBEDYY" target="_blank" class="book-link-sub">Book</a>
+            </div>
+            <div class="service-sub">
+                <h2>Microneedling Face & Neck<br><b>90 min - $210</b></h2>
+                <p class="description">A microneedling treatment that includes both the face and neck, stimulating collagen and enhancing skin rejuvenation.</p>
+                <p id="more-microneedling-face-neck" class="more-description" style="display: none;">This microneedling treatment targets both the face and neck to stimulate collagen production, tighten, and brighten the skin. Pre and post-care instructions include avoiding the gym, sun, swimming, sweating, itching, and rubbing the face for 24-48 hours. Discontinue current skincare products, using hyaluronic acid or the provided aftercare kit while the face heals. Normal skincare routine can be resumed after 4-5 days, avoiding exfoliation for at least a week post-needling.</p>
+                <button id="button-more-microneedling-face-neck" class="view-more" onclick="toggleDescription('more-microneedling-face-neck')">View More</button>
+                <a href="https://www.schedulicity.com/scheduling/PBEDYY" target="_blank" class="book-link-sub">Book</a>
+            </div>
+            <div class="service-sub">
+                <h2>Microneedling with Stem Cell Aftercare Kit<br><b>90 min - $270</b></h2>
+                <p class="description">Includes microneedling treatment and a stem cell aftercare kit to enhance recovery and results.</p>
+                <p id="more-microneedling-stem-cell" class="more-description" style="display: none;">This treatment includes microneedling and a stem cell aftercare kit containing four products designed to reduce redness and enhance recovery immediately following the treatment. The stem cell solution contains pro-healing, anti-inflammatory growth factors and cytokines derived from laboratory culture of human bone marrow mesenchymal stem cells. This solution provides excellent slip during microneedling while reducing inflammation to minimize downtime. The aftercare kit includes a cleanser, serum, and accelerator, which should be used until gone. Regular skincare routine can be resumed after 5-7 days.</p>
+                <button id="button-more-microneedling-stem-cell" class="view-more" onclick="toggleDescription('more-microneedling-stem-cell')">View More</button>
+                <a href="https://www.schedulicity.com/scheduling/PBEDYY" target="_blank" class="book-link-sub">Book</a>
+            </div>
+            <div class="service-sub">
+                <h2>Microneedling - Face, Neck & Chest<br><b>90 min - $225</b></h2>
+                <p class="description">Comprehensive microneedling treatment for the face, neck, and chest, stimulating collagen and enhancing skin rejuvenation.</p>
+                <p id="more-microneedling-face-neck-chest" class="more-description" style="display: none;">This extensive microneedling treatment targets the face, neck, and chest to stimulate collagen production, tighten, and brighten the skin. Pre and post-care instructions include avoiding the gym, sun, swimming, sweating, itching, and rubbing the face for 24-48 hours. Discontinue current skincare products, using hyaluronic acid or the provided aftercare kit while the face heals. Normal skincare routine can be resumed after 4-5 days, avoiding exfoliation for at least a week post-needling.</p>
+                <button id="button-more-microneedling-face-neck-chest" class="view-more" onclick="toggleDescription('more-microneedling-face-neck-chest')">View More</button>
+                <a href="https://www.schedulicity.com/scheduling/PBEDYY" target="_blank" class="book-link-sub">Book</a>
+            </div>
+            <div class="service-sub">
+                <h2>3 Celluma Light Therapy Sessions<br><b>30 min each - $40</b></h2>
+                <p class="description">A package of three Celluma Light Therapy sessions that enhance cellular health and promote relaxation.</p>
+                <p id="more-celluma-3" class="more-description" style="display: none;">This package includes three sessions of Celluma Light Therapy, a treatment that uses LED light to improve cellular health by accelerating the repair process and replenishing damaged skin cells. It also reduces wrinkles, boosts collagen, and alleviates hyperpigmentation. The treatment can be enhanced with spiritual meditation, incorporating essential oils like frankincense, myrrh, sage, cedar, sandalwood, and palo santo to heighten the experience. Benefits include lower blood pressure, reduced anxiety, decreased pain, improved sleep, and eased symptoms of depression.</p>
+                <button id="button-more-celluma-3" class="view-more" onclick="toggleDescription('more-celluma-3')">View More</button>
+                <a href="https://www.schedulicity.com/scheduling/PBEDYY" target="_blank" class="book-link-sub">Book</a>
+            </div>
+            <div class="service-sub">
+                <h2>6 Celluma Light Therapy Sessions<br><b>30 min each - $75</b></h2>
+                <p class="description">A package of six Celluma Light Therapy sessions that enhance cellular health and promote relaxation.</p>
+                <p id="more-celluma-6" class="more-description" style="display: none;">This package includes six sessions of Celluma Light Therapy, a treatment that uses LED light to improve cellular health by accelerating the repair process and replenishing damaged skin cells. It also reduces wrinkles, boosts collagen, and alleviates hyperpigmentation. The treatment can be enhanced with mindfulness meditation, focusing on thoughts and bodily sensations to combine concentration with awareness. Essential oils can be used to heighten the experience. Benefits include lower blood pressure, reduced anxiety, decreased pain, improved sleep, and eased symptoms of depression.</p>
+                <button id="button-more-celluma-6" class="view-more" onclick="toggleDescription('more-celluma-6')">View More</button>
+                <a href="https://www.schedulicity.com/scheduling/PBEDYY" target="_blank" class="book-link-sub">Book</a>
+            </div>            
+        </section>
+    </main>
+    
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img class="logo" src="../images/pureblissNavLogo.png" alt="Pure Bliss Esthetics Logo"/>
+            </div>
+            <div class="footer-info">
+                <div class="footer-social">
+                    <p style="display: inline;">Follow me on Instagram!</p>
+                    <a href="https://www.instagram.com/pureblisstempe/" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="footer-address">
+                    <a href="https://www.google.com/maps/search/?api=1&query=1801+S+Jentilly+Lane+C-4+Tempe+AZ+85281" target="_blank">
+                        1801 S. Jentilly Lane C-4, Tempe, AZ 85281
+                    </a>
+                </div>
+                <div class="footer-phone">
+                    <a href="tel:6028825814">(602) 882-5814</a>
+                </div>
+            </div>
+            <div class="back-to-top">
+                <a href="#top">Back to Top</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

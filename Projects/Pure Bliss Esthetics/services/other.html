@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pure Bliss Esthetics | Services - Other Services</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script>
+        function toggleDescription(id) {
+            const element = document.getElementById(id);
+            const button = document.getElementById(`button-${id}`);
+            if (element.style.display === "none") {
+                element.style.display = "block";
+                button.innerText = "View Less";
+            } else {
+                element.style.display = "none";
+                button.innerText = "View More";
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- NavBar -->
+    <nav class="navBar">
+        <a href="../index.html" class="logo-link" style="text-decoration: none; color: #f2f2f2;">
+            <img class="logo" src="../images/pureblissNavLogo.png" alt="Pure Bliss Esthetics Logo"/>
+        </a>
+        <ul class="nav-links">
+            <li><a class="nav-link" href="../index.html">Home</a></li>
+            <li class="dropdown">
+                <a class="nav-link dropbtn active" href="../services.html">Services</a>
+                <div class="spacer"></div>
+                <div class="dropdown-content">
+                    <a href="../services/skincare.html">Skin Care</a>
+                    <a href="../services/waxing.html">Waxing</a>
+                    <a href="../services/other.html">Other</a>
+                    <a href="../services/add-ons.html">Add-Ons</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a class="nav-link dropbtn" href="../shop.html">Shop</a>
+                <div class="dropdown-content">
+                    <a href="https://eminenceorganics.com/spalink/UFVSMTE4" target="_blank">Shop Eminence</a>
+                    <a href="https://liraclinical.com/" target="_blank">Shop Lira</a>
+                    <a href="http://www.glymedplus.com/store/0026355" target="_blank">Shop Glymed</a>
+                    <a href="http://s.thegiftcardcafe.com/29edQz" target="_blank">Purchase Gift Certificate</a>
+                </div>
+            </li>
+            <li><a class="nav-link" href="../about.html">About</a></li>
+            <li><a class="nav-link" href="../contact.html">Contact</a></li>
+        </ul>
+        <a href="https://www.schedulicity.com/scheduling/PBEDYY" target="_blank" class="book-link">BOOK WITH ME</a>
+    </nav>
+    
+    <section class="other-hero">
+    </section>
+    
+    <!-- SERVICES -->
+    <main class="services-sub-content">
+        <section class="services-sub-container">
+            <div class="service-sub">
+                <h2>Brow Wax & Tint + Hydrojelly Mask<br><b>50 min - $50</b></h2>
+                <p class="description">Enhance your brows and hydrate your skin in under an hour.</p>
+                <p id="more-brow-tint-hydrojelly" class="more-description" style="display: none;">This service combines a brow wax and tint with a hydrojelly mask, providing the perfect little pick-me-up. It's an excellent option for those short on time but looking for a significant boost in hydration and nutrients for their skin. This session will leave your brows looking polished and your skin feeling refreshed.</p>
+                <button id="button-more-brow-tint-hydrojelly" class="view-more" onclick="toggleDescription('more-brow-tint-hydrojelly')">View More</button>
+                <a href="https://www.schedulicity.com/scheduling/PBEDYY" target="_blank" class="book-link-sub">Book</a>
+            </div>
+            <div class="service-sub">
+                <h2>Lash Lift & Tint or Brow Lamination<br><b>50 min - $85 for your first session, $100 thereafter</b></h2>
+                <p class="description">Elevate your look with a lash lift and tint or brow lamination, making your eyes appear more awake.</p>
+                <p id="more-lash-lift-brow-lamination" class="more-description" style="display: none;">Opt for a lash lift and tint or brow lamination to enhance your facial features. This treatment is akin to a perm for the lashes, curling them upwards to make your eyes look more awake and vibrant, allowing you to potentially forego mascara and lash extensions. The first treatment is offered at a special price, with subsequent treatments at the standard rate. This service not only enhances your natural beauty but also saves time in your daily routine.</p>
+                <button id="button-more-lash-lift-brow-lamination" class="view-more" onclick="toggleDescription('more-lash-lift-brow-lamination')">View More</button>
+                <a href="https://www.schedulicity.com/scheduling/PBEDYY" target="_blank" class="book-link-sub">Book</a>
+            </div>            
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img class="logo" src="../images/pureblissNavLogo.png" alt="Pure Bliss Esthetics Logo"/>
+            </div>
+            <div class="footer-info">
+                <div class="footer-social">
+                    <p style="display: inline;">Follow me on Instagram!</p>
+                    <a href="https://www.instagram.com/pureblisstempe/" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="footer-address">
+                    <a href="https://www.google.com/maps/search/?api=1&query=1801+S+Jentilly+Lane+C-4+Tempe+AZ+85281" target="_blank">
+                        1801 S. Jentilly Lane C-4, Tempe, AZ 85281
+                    </a>
+                </div>
+                <div class="footer-phone">
+                    <a href="tel:6028825814">(602) 882-5814</a>
+                </div>
+            </div>
+            <div class="back-to-top">
+                <a href="#top">Back to Top</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
