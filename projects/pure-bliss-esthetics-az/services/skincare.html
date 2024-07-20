@@ -57,21 +57,28 @@
     </nav>
     
     <!-- Mobile NavBar -->
-    <nav class="mobile-navBar">
-        <a href="../index.html" class="logo-link">
-            <img class="logo" src="../images/pureblissNavLogo.png" alt="Pure Bliss Esthetics Logo"/>
-        </a>
-        <div class="hamburger-menu" onclick="toggleMobileMenu()">
-            <i class="fa fa-bars"></i>
-        </div>
-        <ul class="mobile-nav-links">
-            <li><a class="nav-link" href="../index.html">Home</a></li>
-            <li><a class="nav-link active" href="../services.html">Services</a></li>
-            <li><a class="nav-link" href="../shop.html">Shop</a></li>
-            <li><a class="nav-link" href="../about.html">About</a></li>
-            <li><a class="nav-link" href="../contact.html">Contact</a></li>
+    <div class="off-screen-menu">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li class="active"><a href="../services.html">Services</a></li>
+            <li><a href="../shop.html">Shop</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../contact.html">Contact</a></li>
             <li><a href="https://www.schedulicity.com/scheduling/PBEDYY" target="_blank" class="book-link">BOOK WITH ME</a></li>
         </ul>
+    </div>
+    
+    <nav class="mobile-navBar">
+        <div class="logo-link">
+            <a href="../index.html">
+                <img class="logo" src="../images/pureblissNavLogo.png" alt="Pure Bliss Esthetics Logo"/>
+            </a>
+        </div>
+        <div class="ham-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </nav>
     
     <section class="skincare-hero">
@@ -293,10 +300,14 @@
     </footer>
     
     <script>
-        function toggleMobileMenu() {
-            var links = document.querySelector('.mobile-nav-links');
-            links.classList.toggle('active');
-        }
+        const hamMenu = document.querySelector(".ham-menu");
+        const offScreenMenu = document.querySelector(".off-screen-menu");
+        
+        hamMenu.addEventListener("click", () => {
+            hamMenu.classList.toggle("active");
+            offScreenMenu.classList.toggle("active");
+        });
+        
     </script>
 </body>
 </html>

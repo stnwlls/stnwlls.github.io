@@ -44,27 +44,38 @@
     </nav>
     
     <!-- Mobile NavBar -->
-    <nav class="mobile-navBar">
-        <a href="index.html" class="logo-link" style="text-decoration: none; color: #f2f2f2;">
-            <img class="logo" src="images/pureblissNavLogo.png" alt="Pure Bliss Esthetics Logo"/>
-        </a>
-        <div class="hamburger-menu" onclick="toggleMobileMenu()">
-            <i class="fa fa-bars"></i>
-        </div>
-        <ul class="mobile-nav-links">
-            <li><a class="nav-link" href="index.html">Home</a></li>
-            <li><a class="nav-link" href="services.html">Services</a></li>
-            <li><a class="nav-link" href="shop.html">Shop</a></li>
-            <li><a class="nav-link" href="about.html">About</a></li>
-            <li><a class="nav-link active" href="contact.html">Contact</a></li>
+    <div class="off-screen-menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="active"><a href="contact.html">Contact</a></li>
             <li><a href="https://www.schedulicity.com/scheduling/PBEDYY" target="_blank" class="book-link">BOOK WITH ME</a></li>
         </ul>
+    </div>
+    
+    <nav class="mobile-navBar">
+        <div class="logo-link">
+            <a href="index.html">
+                <img class="logo" src="images/pureblissNavLogo.png" alt="Pure Bliss Esthetics Logo"/>
+            </a>
+        </div>
+        <div class="ham-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </nav>
+    
+    <!-- Hero Section -->
+    <section class="contact-hero">
+    </section>
     
     <main class="content contact-page"> 
         <section class="content-section additionalinfo">
-            <h1>Contact Information</h1>
-            <p><strong><u>Location and Parking</u></strong></p>
+            <h1 style="text-align: center; font-size: 2rem;">Contact Information</h1>
+            <h2><strong><u>Location and Parking</u></strong></h2>
             <p>I am located in the Jentilly Square business plaza in building C-4. There is covered parking available in the back, or you can park at the front under the "Jentilly Square" lettering where there is 2-hour parking along the curb.</p>
             <p><b><a href="https://www.google.com/maps/search/?api=1&query=1801+S+Jentilly+Lane+C-4+Tempe+AZ+85281" target="_blank">1801 S. Jentilly Lane C-4, Tempe, AZ 85281</a></b></p>
             <p><b><a href="tel:6028825814">(602) 882-5814</a></b></p>
@@ -100,10 +111,14 @@
     </footer>
     
     <script>
-        function toggleMobileMenu() {
-            var links = document.querySelector('.mobile-nav-links');
-            links.classList.toggle('active');
-        }
+        const hamMenu = document.querySelector(".ham-menu");
+        const offScreenMenu = document.querySelector(".off-screen-menu");
+        
+        hamMenu.addEventListener("click", () => {
+            hamMenu.classList.toggle("active");
+            offScreenMenu.classList.toggle("active");
+        });
+        
     </script>
 </body>
 </html>
