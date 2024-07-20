@@ -542,6 +542,7 @@ body::before {
         text-align: center;
         font-size: 3rem;
         transition: .3s ease;
+        z-index: 1000;
     }
     .off-screen-menu.active {
         right: 0;
@@ -569,22 +570,25 @@ body::before {
         padding: 1rem;
         display: flex;
         justify-content: space-between;
+        align-items: center;
         background-color: #6B705C;
     }
     
     .mobile-navBar .logo-link {
         display: flex;
         align-items: center;
+        justify-content: center;
     }
     
     .mobile-navBar .logo {
-        height: 45px;
+        height: 35px;
     }
     
     .ham-menu {
         height: 50px;
         width: 40px;
         position: relative;
+        z-index: 1000;
     }
     .ham-menu span {
         height: 5px;
@@ -677,6 +681,11 @@ body::before {
         width: 100%;
         margin: auto;
         line-height: 1.5;
+    }
+
+    .footer-logo img {
+        width: 300px;
+        margin-bottom: 20px;
     }
 }
 
