@@ -10,6 +10,8 @@ With a keen eye for detail, I strive to deliver high-quality web experiences tha
 
 Feel free to explore my portfolio and check out some of the projects I've worked on. If you like what you see, don't hesitate to get in touch!
 
+***My portfolio is a work in progress***
+
 ## Contact Me
 
 You can reach me via the following platforms:
