@@ -1,63 +1,105 @@
-/* General Styles */
-body, html {
-    font-family: Helvetica, Arial, sans-serif;
-    background-color: #f2f2f2;
-    color: #333333;
+html {
+    background-color: #F2E9D7;
 }
 
-.content {
-    text-align: center;
-    max-width: 500px;
-    margin: auto;
-    margin-bottom: 100px;
+h1, h2, h3, .navbar, .button, .cta {
+    font-family: "Outfit", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
-/* About Me Section */
-.about-me {
-    margin: auto;
-    margin-top: 50px;
-    max-width: 300px;
+.bodytext, .secondtext, .footertext {
+    font-family: "Roboto", system-ui;
+    font-weight: 400;
+    font-style: normal;
 }
 
-.austinIMG {
-    max-width: 300px;
-    height: auto;
+.navbar {
+    display: flex;
+    justify-content: center;
+    font-size: 1.125rem;
+    background-color: #4F6C99;
+    border-radius: 20px;
+    width: 60%;
+    height: 40px;
+    margin: 30px auto 0 auto;
+    align-items: center;
+    overflow: hidden;
 }
 
-/* Contact Section */
-.contact {
-    margin-top: 50px;
+.navbar ul {
+    display: flex;
+    width: 100%;
+    padding: 20px;
 }
 
-.contact ul {
-    padding: 0;
+.navbar li {
     list-style-type: none;
 }
 
-.contact li {
-    margin-bottom: 10px;
-}
-
-.contact a {
-    color: #007BFF;
+.navbar a {
     text-decoration: none;
+    color: #F2E9D7;
 }
 
-.contact a:hover {
-    text-decoration: underline;
+.active a {
+    background-color: #F2E9D7;
+    color: #4F6C99;
+    border-radius: 20px;
+    padding: 1px 10px;
 }
 
-/* Mobile Styles */
-@media only screen and (max-width: 600px) {
-
+.logo {
+    margin-right: auto;
 }
 
-/* Tablet Styles */
-@media only screen and (min-width: 601px) and (max-width: 900px) {
-
+.navlink {
+    margin: 0 20px;
+    justify-content: space-between;
 }
 
-/* Desktop Styles */
-@media only screen and (min-width: 901px) {
+.navcirc {
+    padding: 0 2px;
+}
 
+.circ {
+    color: #4F6C99;
+    background-color: #F2E9D7;
+    padding: 5px 8px;
+    border-radius: 50%;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    padding: 0;
+    width: 70%;
+    margin-top: 100px;
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 50px;
+}
+
+.name {
+    color: #4F6C99;
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.tagline {
+    color: #222222;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.graphic {
+    width: 600px;
 }
