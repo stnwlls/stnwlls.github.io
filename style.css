@@ -8,6 +8,7 @@ h1, h2, h3, .navbar, .button, .cta {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    letter-spacing: 0.03em;
 }
 
 .bodytext, .secondtext, .footertext {
@@ -26,7 +27,6 @@ h1, h2, h3, .navbar, .button, .cta {
     height: 40px;
     margin: 30px auto 0 auto;
     align-items: center;
-    overflow: hidden;
     position: fixed;
     z-index: 1000;
     top: 0;
@@ -49,11 +49,18 @@ h1, h2, h3, .navbar, .button, .cta {
     color: #F2E9D7;
 }
 
-.active a {
-    background-color: #F2E9D7;
-    color: #4F6C99;
-    border-radius: 20px;
-    padding: 1px 10px;
+.navlink:hover {
+    color: #F2E9D7;
+    border-top: 3px solid #F2E9D7;
+    border-left: 3px solid #F2E9D7;
+    padding-left: 5px;
+    margin-bottom: -5px;
+    margin-left: 22px;
+}
+
+.active, .dropdown-menu .active {
+    color: #F2E9D7;
+    border-top: 3px solid #F2E9D7;
 }
 
 .logo {
@@ -150,4 +157,79 @@ h1, h2, h3, .navbar, .button, .cta {
     position:fixed;
     bottom:0;
     right: 30px;
+}
+
+.indlink {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: #F2E9D7;
+    margin: 100px 0;
+    gap: 20px;
+}
+
+.indbut {
+    background-color: #4F6C99;
+    color: #F2E9D7;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    flex: 1;
+    text-align: center;
+    max-width: 10%;
+}
+
+.indbut:hover {
+    background-color: #F2E9D7;
+    color: #4F6C99;
+    border: 2px solid #4F6C99;
+    padding: 8px 18px;
+    font-weight: bold;
+}
+
+.portlink {
+    margin-top: 200px;
+}
+
+/* Dropdown Menu Styles */
+
+.navbar .navlink.dropdown {
+    position: relative;
+}
+
+.navbar .navlink.dropdown ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #4F6C99;
+    border-radius: 0 0 20px 20px;
+    padding: 0;
+    list-style: none;
+    min-width: 150px;
+    z-index: 1000;
+}
+
+.navbar .navlink.dropdown:hover ul {
+    display: block;
+}
+
+.navbar .navlink.dropdown ul li {
+    margin: 0;
+}
+
+.navbar .navlink.dropdown ul li a {
+    background-color: #4F6C99;
+    color: #F2E9D7;
+    padding: 10px 5px;
+    margin: 5px 10px 3px 10px;
+    display: block;
+    text-decoration: none;
+}
+
+.navbar .navlink.dropdown ul li a:hover {
+    color: #F2E9D7;
+    border-top: 3px solid #F2E9D7;
+    border-left: 3px solid #F2E9D7;
 }

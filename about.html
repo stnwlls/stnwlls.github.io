@@ -3,44 +3,149 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>austin wells | web developer</title>
-  <link rel="stylesheet" href="style.css">
+  <title>austin wells | about</title>
+  <!-- <link rel="stylesheet" href="style.css"> -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <style>
+    html {
+        background-color: #F2E9D7;
+        scroll-behavior: smooth !important;
+    }
+
+    h1, h2, h3, .navbar, .button, .cta {
+        font-family: "Outfit", system-ui;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .bodytext, .secondtext, .footertext {
+        font-family: "Roboto", system-ui;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: center;
+        font-size: 1.125rem;
+        background-color: #4F6C99;
+        border-radius: 20px;
+        width: 60%;
+        height: 40px;
+        margin: 30px auto 0 auto;
+        align-items: center;
+        overflow: hidden;
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .navbar ul {
+        display: flex;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .navbar li {
+        list-style-type: none;
+    }
+
+    .navbar a {
+        text-decoration: none;
+        color: #F2E9D7;
+    }
+
+    .active a {
+        background-color: #F2E9D7;
+        color: #4F6C99;
+        border-radius: 20px;
+        padding: 1px 10px;
+    }
+
+    .logo {
+        margin-right: auto;
+    }
+
+    .navlink {
+        margin: 0 30px;
+        justify-content: space-between;
+    }
+
+    .navcirc {
+        padding: 0 2px;
+    }
+
+    .circ {
+        color: #4F6C99;
+        background-color: #F2E9D7;
+        padding: 5px 8px;
+        border-radius: 50%;
+    }
+
+    .aboutme {
+        margin: auto;
+        padding: 0;
+        width: 60%;
+        margin-top: -30px;
+        margin-bottom: 50px;
+        padding-top: 100px;
+    }
+
+    .aboutme img {
+        height: 550px;
+        width: 550px;
+        float: left;
+        margin-right: 30px;
+    }
+
+    .aboutme .aboutcontainer {
+        display: flex;
+        align-items: center;
+    }
+
+    .aboutme h2 {
+        color: #222222;
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin: 20px 0 20px 0;
+    }
+
+    .aboutme p {
+        color: #222222;
+        font-size: 1rem;
+        font-weight: 400;
+        margin: 0;
+        /* text-transform: lowercase; */
+    }
+
+    .footer {
+        position:fixed;
+        bottom:0;
+        right: 30px;
+    }
+  </style>
 </head>
 <body>
 
   <nav class="navbar">
     <ul>
-      <li class="logo"><a href="#"><strong>austinwells.dev</strong></a></li>
-      <li class="navlink active"><a href="#"><strong>home</strong></a></li>
-      <li class="navlink"><a href="#about"><strong>about</strong></a></li>
-      
-      <li class="navlink dropdown">
-        <a href="projects/portfolio.html"><strong>portfolio</strong></a>
-        <ul class="dropdown-menu">
-          <li><a href="projects/Academic Projects/project1.html"><strong>project1</strong></a></li>
-          <li><a href="projects/Academic Projects/project2.html"><strong>project2</strong></a></li>
-          <li><a href="projects/Academic Projects/project3.html"><strong>project3</strong></a></li>
-        </ul>
-      </li>
-
+      <li class="logo"><a href="index.html"><strong>austinwells.dev</strong></a></li>
+      <li class="navlink"><a href="index.html"><strong>home</strong></a></li>
+      <li class="navlink active"><a href="about.html"><strong>about</strong></a></li>
+      <li class="navlink"><a href="projects/Academic Projects/portfolio.html"><strong>portfolio</strong></a></li>
       <li class="navlink"><a href="contact.html"><strong>contact</strong></a></li>
       <li class="navcirc"><a href="https://github.com/stnwlls" target="_blank"><i class="bi bi-github circ"></i></a></li>
       <li class="navcirc"><a href="https://www.linkedin.com/in/austinhwells" target="_blank"><i class="bi bi-linkedin circ"></i></a></li>
       <li class="navcirc"><a href="resume.pdf" target="_blank"><i class="bi bi-file-person circ"></i></a></li>
     </ul>
   </nav>
-
-  <section class="hero">
-    <div class="text-content">
-      <h1 class="name">austin wells</h1>
-      <h2 class="tagline">full-stack web developer</h2>
-    </div>
-    <img src="images/graphic.png" alt="Developer graphic" class="graphic" width="954" height="">
-  </section>
 
   <section class="aboutme" id="about">
     <div class="about-container">
@@ -62,35 +167,10 @@
     <h2>looking ahead</h2>
     <p class="bodytext">My goal is to pursue freelance web development, combining my passion for travel and tech. I plan to specialize in JavaScript while continuing to grow my full-stack knowledge and deliver web solutions that make a difference.</p>
   </section>
-  
-  <section class="indlink">
-    <a href="projects/portfolio.html" class="button indbut">view my portfolio</a>
-    <a href="" class="button indbut">contact me</a>
-  </section>
 
   <footer class="footer">
     <p class="footertext">&copy; 2024 Austin Wells</p>
   </footer>
 
-  <script>
-    document.addEventListener('scroll', function() {
-      const aboutSection = document.querySelector('#about');
-      const homeLink = document.querySelector('.navlink a[href="#"]').parentElement;
-      const aboutLink = document.querySelector('.navlink a[href="#about"]').parentElement;
-  
-      const scrollPosition = window.scrollY;
-      const aboutSectionOffsetTop = aboutSection.offsetTop;
-      const aboutSectionHeight = aboutSection.offsetHeight;
-  
-      if (scrollPosition >= aboutSectionOffsetTop - 50) {
-        homeLink.classList.remove('active');
-        aboutLink.classList.add('active');
-      } else {
-        aboutLink.classList.remove('active');
-        homeLink.classList.add('active');
-      }
-    });
-  </script>
-  
 </body>
 </html>
