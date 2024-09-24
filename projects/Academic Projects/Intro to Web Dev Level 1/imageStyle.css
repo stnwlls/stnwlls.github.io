@@ -1,0 +1,31 @@
+.appleProductTimeline {
+    float: right;
+    margin: 10px;
+    border-style: dotted;
+    border-width: thick;
+    border-radius: 80%;
+    border-color: yellow;
+}
+
+.appleFirstiPod {
+    float: left;
+    margin: 10px;
+    border-style: dashed;
+    border-width: thick;
+    border-radius: 50% 0 50% 0;
+    border-color: #F84E29;
+}
+
+.appleLogoSlogan {
+    float: right;
+    margin: 10px;
+    border-style: groove;
+    border-width: thick;
+    border-radius: 35% 35% 0 0;
+    border-color: rgba(255, 120, 255, 0.5);
+}
+
+.footerImage {
+    max-width: 100%;
+    height: auto;
+}

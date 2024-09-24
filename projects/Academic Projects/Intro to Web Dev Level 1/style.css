@@ -1,0 +1,146 @@
+/* main header style */
+h1 {
+	text-align: center;
+	color: #003366;
+	text-transform: uppercase;
+}
+
+/* sub header style */
+h2 {
+	background-color: #002244;
+	color: #FFFFFF;
+	font-family: Papyrus, "Brush Script MT", Monaco;
+}
+
+/* paragraph style */
+p {
+	/* background-color: #4A4A4A; */
+	color: #333333;
+	border-radius: 10px;
+	padding: 0 20px;
+	font-family: Helvetica, sans-serif, monospace;
+}
+		
+.highlight {
+	background-color: #1E3A8A;
+}
+
+.indent {
+	text-indent: 20%;
+}
+
+.shape {
+	list-style-type: square;
+}
+
+/* Table CSS */
+table {
+	width: 90%;
+	margin: auto;
+	border-collapse: collapse;
+	text-align: center;
+}
+
+caption {
+	margin-bottom: 10px;
+}
+
+th, td {
+	border: 2px solid black;
+	padding: 8px;
+}
+
+th {
+	background-color: #1A237E;
+	color: #FFFFFF;
+}
+
+td {
+	background-color: #3949AB;
+	color: #FFFFFF;
+}
+
+tfoot {
+	font-weight: bold;
+	text-align: right;
+	font-size: 0.7em;
+}
+
+tfoot td {
+	background-color: transparent;
+	border: none;
+	color: #1A237E;
+}
+
+/* List CSS */
+
+ol {
+	list-style: lower-alpha;
+}
+
+ul {
+	list-style: '';
+}
+
+/* CSS Grid - Apple Execs */
+
+.gridContainer {
+	  display: grid;
+	  grid-template-columns: 1fr 1fr 1fr;
+	  grid-template-rows: 3fr 3fr 1fr;
+	  grid-template-areas:
+		  'grid1 grid2 grid3'
+		'grid1 grid2 grid3'
+		'grid7 grid8 grid9';
+	  background-color: #212121;
+	  /*gap: 10px;*/
+	  padding: 5px;
+}
+
+.gridContainer > div {
+	  background-color: rgba(255, 255, 255, 0.9);
+	  border: 1px solid rgba(0, 0, 0, 1);
+	  padding: 20px;
+	  font-size: 30px;
+	  text-align: center;
+	  font-family: Papyrus, "Brush Script MT", Monaco;
+}
+
+.grid1 {
+	grid-area: grid1; 
+	background-image: url("images/steveJobs.jpg"); 
+	width: auto; 
+	background-size: cover; 
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.grid2 {
+	grid-area: grid2; 
+	background-image: url("images/steveWozniak.jpg"); 
+	width: auto; 
+	background-size: cover; 
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.grid3 {
+	grid-area: grid3; 
+	background-image: url("images/timCook.jpg"); 
+	width: auto; 
+	background-size: cover; 
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.grid4 {grid-area: grid4; display: none;}
+
+.grid5 {grid-area: grid5; display: none;}
+
+.grid6 {grid-area: grid6; display: none;}
+
+.grid7 {grid-area: grid7;}
+
+.grid8 {grid-area: grid8;}
+
+.grid9 {grid-area: grid9;}

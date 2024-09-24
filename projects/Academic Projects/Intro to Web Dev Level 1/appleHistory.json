@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Founding of Apple",
+        "year": "1976",
+        "location": "Cupertino, California, USA",
+        "description": "Apple was founded by Steve Jobs and Steve Wozniak."
+    },
+    {
+        "name": "Introduction of the Macintosh",
+        "year": "1984",
+        "location": "Cupertino, California, USA",
+        "description": "Apple introduced the Macintosh, the first mass-market personal computer with a graphical user interface and a mouse."
+    },
+    {
+        "name": "Launch of the iPhone",
+        "year": "2007",
+        "location": "San Francisco, California, USA",
+        "description": "Apple launched the first iPhone, revolutionizing the smartphone industry."
+    }
+]

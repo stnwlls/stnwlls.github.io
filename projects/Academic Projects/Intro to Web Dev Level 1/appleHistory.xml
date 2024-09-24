@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<appleHistory>
+    <event>
+        <name>Founding of Apple</name>
+        <year>1976</year>
+        <location>Cupertino, California, USA</location>
+        <description>Apple was founded by Steve Jobs and Steve Wozniak.</description>
+    </event>
+    <event>
+        <name>Introduction of the Macintosh</name>
+        <year>1984</year>
+        <location>Cupertino, California, USA</location>
+        <description>Apple introduced the Macintosh, the first mass-market personal computer with a graphical user interface and a mouse.</description>
+    </event>
+    <event>
+        <name>Launch of the iPhone</name>
+        <year>2007</year>
+        <location>San Francisco, California, USA</location>
+        <description>Apple launched the first iPhone, revolutionizing the smartphone industry.</description>
+    </event>
+</appleHistory>

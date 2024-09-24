@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Austin Wells - CIS133DA</title>
+		<link rel="stylesheet" href="style.css" type="text/css">
+		<link rel="stylesheet" href="imageStyle.css" type="text/css">
+		<style>
+			/* Internal Stylesheet (previous CSS moved to external stylesheet) */
+			
+			/* navBar CSS */
+			nav.navBar {
+				width: 100%;
+				margin: auto;
+				text-align: center;
+				background-color: #1E3A8A;
+				color: #FFFFFF;
+			}
+
+			.navBar ul {
+				padding: 0px;
+				margin: 0;
+				display: flex;
+				justify-content: center;
+			}
+
+			.navBar li {
+				list-style: none;
+				margin: 0 10px;
+			}
+			
+			.navBar a {
+				text-decoration: none;
+				color: #FFFFFF;
+				display: block;
+				padding: 10px;
+			}
+			
+			.navBar a:hover {
+				background-color: #E0F2F1;
+				color: #000000;
+			}
+
+			/* form CSS */
+			form {
+				width: 80%;
+				margin: auto;
+				padding: 20px;
+				border: 10px solid #1E3A8A;
+			}
+
+			legend {
+				font-weight: bold;
+				color: #1E3A8A;
+			}
+
+			label {
+				color: #333333;
+			}
+
+			input[type="text"], input[type="date"] {
+				width: 97%;
+				padding: 10px;
+				margin: 10px 0;
+				border: 1px solid #1E3A8A;
+				border-radius: 5px;
+			}
+
+			button[type="submit"], button[type="reset"] {
+				background-color: #1E3A8A;
+				color: #FFFFFF;
+				padding: 10px 20px;
+				border-radius: 5px;
+				font-size: 16px;
+			}
+
+			button[type="submit"]:hover, button[type="reset"]:hover {
+				background-color: #E0F2F1;
+				color: #000000;
+			}
+
+			/* "Like" Button CSS */
+			#likeButton, #likeCount {
+				display: inline-block;
+				margin: 0;
+			}
+
+		</style>
+		<script src="appleHistory.js"></script>
+		<script>
+		document.addEventListener("DOMContentLoaded", function () {
+            // Interactive "Like" button functionality
+            const likeButton = document.getElementById("likeButton");
+            const likeCount = document.getElementById("likeCount");
+
+            // Retrieve the like count from localStorage
+            let likes = parseInt(localStorage.getItem("likes")) || 0;
+            updateLikeCount();
+
+            likeButton.addEventListener("click", function () {
+                likes++;
+                updateLikeCount();
+                // Store the updated like count in localStorage
+                localStorage.setItem("likes", likes);
+            });
+
+            function updateLikeCount() {
+                likeCount.textContent = likes === 1 ? "1 Like" : likes + " Likes";
+            }
+        });
+		</script>
+    </head>
+    <body style="background-color: #FAFAFA;">
+
+		<!-- navBar -->
+		<nav class="navBar">
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Products</a></li>
+				<li><a href="#">Contact</a></li>
+				<li><a href="#">Careers</a></li>
+			</ul>
+		</nav>
+		
+		<!-- Page Header -->
+		<h1>History of Apple Inc.</h1>
+		
+        <img class="appleProductTimeline" src="images/appleProductTimeline.jpg" width="200px" alt="Apple products over time in a timeline">
+		
+		<!-- "Like" Button -->
+		<button id="likeButton">Like</button>
+    	<p id="likeCount">0 Likes</p>
+		
+		<!-- History of Apple -->
+		<h2 class="highlight">History</h2>
+		<p class="indent">One of the most recognizable brands in the world, Apple created the first commercially successful personal computer and was also the first to bring the graphical user interface (GUI) into mass adoption.</p>
+		<p class="indent">Founded by Steve Jobs and Steve Wozniak in 1976, Apple set new benchmarks in product innovation, user-centric functionality, aesthetics and design, and multiproduct integration. Apple redefined and transformed the capabilities of modern computing. Further, Apple innovated the industry by establishing a marketplace ecosystem for third-party application developers, leveraging this new economy to expand its products’ functionalities and strengthen its position. The company is headquartered in Cupertino, California.</p>
+		
+		<!-- List of Products -->
+		<h2>Key Products</h2>
+		<ul class="shape">
+			<li><strong>iPod |</strong> A digital music player, the likes of which hadn’t been seen since the Sony Walkman, the iPod revolutionized the music industry in 2001, transforming the way listeners consume music.</li>
+			<li><strong>iPhone |</strong> Essentially a sophisticated computer packaged in a flat cube, the iPhone was a game changer in mobile technology, altering the way people communicate and consume media.</li>
+			<li><strong>iPad |</strong> Bridging the gap between smartphones and laptops, the iPad opened up a new market for digital tablets since its debut in 2010.</li>
+			<li><strong>Apple Watch |</strong> Launched in 2015, the Apple Watch is among the most dominant products in the wearable tech sector.</li>
+		</ul>
+		
+		<!-- Prices at Release -->
+		<table>
+			<thead>
+		        <tr>
+		            <th><u>Product</u></th>
+		            <th><u>Release Year</u></th>
+		            <th><u>Price at Release</u></th>
+		        </tr>
+			</thead>
+			<tbody>
+				<tr>
+		            <td rowspan="4">iPod</td>
+		            <td>2001</td>
+		            <td>$399</td>
+		        </tr>
+		        <tr>
+		            <td>2002</td>
+		            <td>$499</td>
+		        </tr>
+		        <tr>
+		            <td>2003</td>
+		            <td>$299</td>
+		        </tr>
+		        <tr>
+		            <td>2004</td>
+		            <td>$249</td>
+		        </tr>
+		        <tr>
+		            <td rowspan="2">iPhone</td>
+		            <td>2007</td>
+		            <td>$499 (4GB), $599 (8GB)</td>
+		        </tr>
+		        <tr>
+		            <td>2008</td>
+		            <td>$199 (8GB), $299 (16GB)</td>
+		        </tr>
+		        <tr>
+		            <td rowspan="2">iPad</td>
+		            <td>2010</td>
+		            <td>$499 (16GB), $599 (32GB), $699 (64GB)</td>
+		        </tr>
+		        <tr>
+		            <td>2011</td>
+		            <td>$499 (16GB), $599 (32GB), $699 (64GB)</td>
+		        </tr>
+		        <tr>
+		            <td>Apple Watch</td>
+		            <td>2015</td>
+		            <td>$349 (Sport), $549 (Watch), $10,000 (Edition)</td>
+		        </tr>	
+			</tbody>
+	        <tfoot>
+				<tr>
+	                <td colspan="3">Source: <a href="www.google.com" target="_blank">www.google.com</a></td>
+	            </tr>
+	        </tfoot>
+	    </table>
+		
+		<!-- Products Expanded -->
+		<img class="appleFirstiPod" src="images/appleFirstiPod.jpg" width="250px" alt="The first iPod">
+		<h2>iPod</h2>
+		<p>Apple began selling the iPod, a portable MP3 player, which quickly became the market leader. Later models added larger storage capacities or smaller sizes, color screens, and video playback features. In 2003 Apple began selling downloadable copies of major record company songs in MP3 format over the Internet. The iPod Nano digital music player, one-fifth the size of the original iPod, was introduced by Apple in 2005. By 2006 more than one billion songs and videos had been sold through Apple’s website.</p>
+		
+		<h2>iPhone</h2>
+		<p>In 2007 Apple introduced the touch screen iPhone, a cellular telephone with capabilities for playing MP3s and videos and accessing the Internet. More than just a mobile computer and media player merged with a phone, it pioneered multi-touch features that shaped the way users interact with technology.</p>
+		
+		<img class="appleLogoSlogan" src="images/appleLogoSlogan.jpg" width="300px" alt="Apple's logo and slogan which reads think different">
+		<h2>iPad</h2>
+		<p>In 2010 Apple unveiled the iPad, a touch screen device whose size and function bridged the gap between a laptop computer and a smartphone. The iPad was a multimedia tablet that allowed users to operate it with the same set of finger gestures as the iPhone. Designed with a touch screen capable of displaying high-definition video, the iPad also provided access to apps via iTunes and the App Store.</p>
+		
+		<h2>Apple Watch</h2>
+		<p>In 2015 Apple introduced a smartwatch, the Apple Watch, which marked the company’s entry into wearable technology. Integrating fitness, health monitoring, and online and iPhone connectivity, the Apple Watch became a major business segment within the company’s expansive suite of products.</p>
+		
+		<h2>Apple Product Highlights</h2>
+	    <ol>
+	        <li>iPod
+	            <ul>
+	                <li>First released in 2001</li>
+	                <li>Changed the music industry</li>
+	                <li>Your songs on the go</li>
+	            </ul>
+	        </li>
+	        <li>iPhone
+	            <ul>
+	                <li>First released in 2007</li>
+	                <li>Revolutionized smartphones</li>
+	                <li>Included an iPod and a Cell Phone so you only needed one device</li>
+	            </ul>
+	        </li>
+	        <li>iPad
+	            <ul>
+	                <li>First released in 2010</li>
+	                <li>Introduction to tablet computing</li>
+	                <li>Changed the game for artists with the release of the Apple Pencil</li>
+	            </ul>
+	        </li>
+	        <li>Apple Watch
+	            <ul>
+	                <li>First released in 2015</li>
+	                <li>Introduced fitness tracking features</li>
+	                <li>Also had lifesaving health monitoring features, like fall detection and crash detection</li>
+	            </ul>
+	        </li>
+	        <li>Overall, Apple has played a key role in changing the technology industry for the better.</li>
+	    </ol>
+
+		<h2>A Brief History of Apple Inc.</h2>
+		<div id="appleHistory"></div>
+
+		<h2>Apple Product Launch Timeline</h2>
+		<iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1woQpF1kB2gzWIlv62wZMZqu5GpIclQWX0o1BGLm9HOE&font=Default&lang=en&initial_zoom=0&height=650' width='100%' height='650' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
+
+		<h2>Conclusion</h2>
+		<p>Apple's history from a Silicon Valley garage start-up to a trillion-dollar tech titan reads like an epic saga with the twists and turns of a corporate thriller. From its early rivalry with IBM to its current position of market dominance, Apple has innovated and transformed the technological landscape by challenging established notions of what a product is, how it should work, and how it can be integrated into our daily lives (both at home and work). Apple’s trajectory can perhaps best be summarized by its iconic 1997 slogan, created when the then-struggling company was poised at the crossroads of self-reinvention: “Think different.”</p>
+		
+		<!-- Form -->
+
+		<h2>What about you?</h2>
+		<form class="userForm" method="post" action="https://gophp.w3spaces.com/contactA.php">
+			<fieldset>
+				<legend>Tell Us About Your Apple Experience</legend>
+				<br>
+				
+				<label for="inputName">What is your name? <sup><span style="color:red;">*</span></sup></label>
+				<input type="text" name="name" id="inputName" required>
+				<br>
+
+				<label for="favoriteProduct">What's your favorite Apple product?</label>
+				<input type="text" name="favoriteProduct" id="favoriteProduct">
+				<br>
+
+				<label for="firstProduct">What Apple product was your first?</label>
+				<input type="text" name="firstProduct" id="firstProduct" list="products">
+				<datalist id="products">
+					<option value="iPod">
+					<option value="iPhone">
+					<option value="iPad">
+					<option value="Apple Watch">
+				</datalist>
+				<br>
+
+				<label>Which Apple products do you currently own? (Select all that apply)</label>
+				<br>
+				<br>
+				<input type="checkbox" name="ownedProducts" id="owniPod" value="iPod">
+				<label for="owniPod">iPod</label>
+				<br>
+				<input type="checkbox" name="ownedProducts" id="owniPhone" value="iPhone">
+				<label for="owniPhone">iPhone</label>
+				<br>
+				<input type="checkbox" name="ownedProducts" id="owniPad" value="iPad">
+				<label for="owniPad">iPad</label>
+				<br>
+				<input type="checkbox" name="ownedProducts" id="ownAppleWatch" value="Apple Watch">
+				<label for="ownAppleWatch">Apple Watch</label>
+				<br>
+				<br>
+				
+				<label for="purchaseDate">When did you purchase your first Apple product?</label>
+				<input type="date" name="purchaseDate" id="purchaseDate">
+				<br>
+				
+				<label for="favoriteColor">If you could have any color Apple product, what would you choose?</label>
+				<input type="color" name="favoriteColor" id="favoriteColor">
+				<br>
+				<br>
+				
+				<button type="submit">Submit</button>
+				<button type="reset">Reset</button>
+
+				<p><span style="color: red; font-size: smaller;">* This field is required.</span></p>
+			</fieldset>
+		</form>
+
+		<hr>
+
+		<!-- Reference -->
+        <p>Reference:</p>
+		<p>Encyclopaedia Britannica. (2024). History of Apple Inc. [Article]. Retrieved from <a href="https://www.britannica.com/money/Apple-Inc" target="_blank">https://www.britannica.com/money/Apple-Inc</a> on June 1, 2024.</p>
+		
+		<h2 style="text-align: center;"><u>Apple Executives</u></h2>
+		
+		<div class="gridContainer">
+			<div class="grid1"></div>
+			<div class="grid2"></div>
+			<div class="grid3"></div>
+			<div class="grid4"></div>
+			<div class="grid5"></div>
+			<div class="grid6"></div>
+			<div class="grid7"><a href="https://www.britannica.com/money/Steve-Jobs" target="_blank">Steve Jobs</a></div>
+			<div class="grid8"><a href="https://www.britannica.com/biography/Stephen-Gary-Wozniak" target="_blank">Steve Wozniak</a></div>
+			<div class="grid9"><a href="https://www.britannica.com/money/Tim-Cook" target="_blank">Tim Cook</a></div>
+		</div>
+		
+		<br>
+		
+		<img class="footerImage" src="images/appleProductTimeline.jpg" width="800px" alt="Apple products over time in a timeline">
+
+		<footer style="text-align:center; background-image: url('images/appleProductTimeline.jpg'); background-size: cover;">
+			<p><a href="#">Home</a> | <a href="#">About</a> | <a href="#">Services</a> | <a href="#">News</a> | <a href="#">Privacy Policy</a> | <a href="#">Contact</a></p>
+			<br><br><br>
+			<p>Copyright &copy; - All rights reserved</p>
+		</footer>
+
+	</body>
+</html>
