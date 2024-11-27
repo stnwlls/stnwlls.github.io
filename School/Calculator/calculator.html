@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <img src="images/bezel.png" class="bezel">
+    <div id="calculator">
+        <div class="status-bar">
+            <div class="time">12:00</div>
+            <div class="status-items">
+                <img src="images/cellular.png" class="statusitem">
+                <img src="images/wifi.png" class="statusitem">
+                <img src="images/battery.png" class="statusitem">
+            </div>
+        </div>
+        <input id="display" placeholder="0" readonly>
+        <div class="keycontainer">
+            <div id="keys">
+                <button class="key1" onclick="clearDisplay()">C</button>
+                <button class="key1" onclick="toggleSign()">+/–</button>
+                <button class="key1" onclick="appendToDisplay('%')">%</button>
+                <button class="calc" onclick="appendToDisplay('/')">÷</button>
+                <button class="key" onclick="appendToDisplay('7')">7</button>
+                <button class="key" onclick="appendToDisplay('8')">8</button>
+                <button class="key" onclick="appendToDisplay('9')">9</button>
+                <button class="calc" onclick="appendToDisplay('*')">x</button>
+                <button class="key" onclick="appendToDisplay('4')">4</button>
+                <button class="key" onclick="appendToDisplay('5')">5</button>
+                <button class="key" onclick="appendToDisplay('6')">6</button>
+                <button class="calc" onclick="appendToDisplay('-')">–</button>
+                <button class="key" onclick="appendToDisplay('1')">1</button>
+                <button class="key" onclick="appendToDisplay('2')">2</button>
+                <button class="key" onclick="appendToDisplay('3')">3</button>
+                <button class="calc" onclick="appendToDisplay('+')">+</button>
+                <button class="key zero" onclick="appendToDisplay('0')">0</button>
+                <button class="key" onclick="appendToDisplay('.')">.</button>
+                <button class="calc" onclick="calculate()">=</button>
+            </div>
+        </div>
+        <div class="home"></div>
+    </div>
+    <script>
+        const time = document.querySelector('.time');
+
+        function updateTime() {
+            const now = new Date();
+            let hours = now.getHours();
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            hours = hours % 12;
+            hours = hours ? hours : 12; // the hour '0' should be '12'
+            const strTime = hours + ':' + minutes;
+            time.textContent = strTime;
+        }
+
+        updateTime();
+    </script>
+    <script src="calculator.js"></script>
+</body>
+</html>
