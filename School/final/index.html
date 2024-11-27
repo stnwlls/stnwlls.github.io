@@ -5,15 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100-900;1,100-900&display=swap" rel="stylesheet">
     <title>Kelp Shakes!</title>
     <style>
         body {
-            background-color: #00AeD230 !important;
+            background-color: #a2d4eb;
+            font-family: "Noto Sans", sans-serif !important;
         } 
         
         .navbar {
-            background-color: #ffffff;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url('images/navbg.png');
+            background-size: cover;
+            background-position: center;
         }
+        
+        .navbar-toggler {
+            border-style: none;
+        }
+        
         .icon-hover:hover {
             color: #4caf50;
         }
@@ -21,19 +32,42 @@
         .btn-pill {
             border-radius: 50px;
             background-color: #4caf50;
+            box-shadow: 6px 6px 12px 0px rgba(0,0,0,0.3);
             font-weight: bold;
+            border: 1px solid #2C2C2C;
         }
         
         .btn-pill:hover {
             background-color: #218838;
+            border: 1px solid #2C2C2C;
         }
         
         .btn-pill-secondary {
             background-color: #00aed2;
+            box-shadow: 6px 6px 12px 0px rgba(0,0,0,0.3);
+            border: 1px solid #2C2C2C;
+            font-weight: bold;
+        }
+        
+        .btn-pill-secondary:hover {
+            background-color: #007f9b;
+            border: 1px solid #2C2C2C;
+        }
+        
+        .btn-pill-red {
+            background-color: #E6251A;
+            box-shadow: 6px 6px 12px 0px rgba(0,0,0,0.3);
+            border: 1px solid #2C2C2C;
+            font-weight: bold;
+        }
+        
+        .btn-pill-red:hover {
+            background-color: #B31A15;
+            border: 1px solid #2C2C2C;
         }
         
         .hero-section {
-            background-image: url('https://placehold.co/1920x600');
+            background-image: url('images/hero.png');
             background-size: cover;
             background-position: center;
             height: 100vh;
@@ -42,15 +76,120 @@
         }
         
         .origin-card {
-            background-image: url('https://placehold.co/1640x400');
+            background-image: url('images/origin.png');
             background-size: cover;
             background-position: center;
             height: 400px;
             border: 1px solid #707070;
         }
         
+        .discover-card {
+            background-image: url('images/discover.png');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            border: 1px solid #707070;
+        }
+        
+        .rewards-card {
+            background-image: url('images/rewards.png');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 300px;
+        }
+        
+        .reviewSS {
+            background-image: url('images/reviewSS.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 400px;
+        }
+        
+        .reviewPS {
+            background-image: url('images/reviewPS.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 400px;
+        }
+        
+        .reviewST {
+            background-image: url('images/reviewST.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 400px;
+        }
+        
         .border {
             border: 5px solid red !important;
+        }
+        
+        .footer {
+            background-color: #4caf50;
+            color: #ffffff;
+        }
+        
+        .footer a:hover {
+            color: #88e38d !important;
+        }
+
+        @media (max-width: 441px) {
+            .reviewPS h5, .reviewSS h5, .reviewST h5 {
+                font-size: calc(0.8rem + 0.5vw) !important;
+            }
+
+            .reviewPS p, .reviewSS p, .reviewST p {
+                padding-bottom: 40px;
+                font-size: calc(0.6rem + 0.5vw) !important;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .navbar-collapse {
+                text-align: center;
+            }
+
+            .bi {
+                display: none;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1076px) {
+            .reviewPS h5, .reviewSS h5, .reviewST h5 {
+                font-size: calc(0.6rem + 0.5vw) !important;
+            }
+
+            .reviewPS p, .reviewSS p, .reviewST p {
+                padding-bottom: 80px;
+                font-size: calc(0.4rem + 0.5vw) !important;
+            }
+        }
+
+        @media (min-width:1077px) and (max-width: 1400px) {
+            .reviewPS h5, .reviewSS h5, .reviewST h5 {
+                font-size: calc(0.7rem + 0.5vw) !important;
+            }
+
+            .reviewPS p, .reviewSS p, .reviewST p {
+                padding-bottom: 40px;
+                font-size: calc(0.4rem + 0.5vw) !important;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .rewards-card h2 {
+                font-size: 1rem;
+            }
+            .rewards-card a {
+                font-size: .8rem;
+            }
+
+            .footer {
+                text-align: center;
+            }
         }
     </style>
 </head>
@@ -59,9 +198,9 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <a href="#" class="navbar-brand ms-3">
-                <img src="https://placehold.co/60x60" alt="Logo" width="60" height="60" class="d-inline-block align-text-top">
+                <img src="images/navlogo.png" alt="Logo" width="60" height="60" class="d-inline-block align-text-top">
             </a>
-            <a href="#" class="navbar-brand text-uppercase d-lg-none icon-hover">Kelp Shakes</a>
+            <a href="#" class="navbar-brand text-uppercase d-lg-none icon-hover fw-bold">Kelp Co.</a>
             <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -123,13 +262,13 @@
             <div class="col-12 px-0 hero-section">
                 <div class="position-absolute top-50 translate-middle-y w-100">
                     <div class="row">
-                        <div class="col-5"></div>
-                        <div class="col-5 text-center text-white">
+                        <div class="col-md-5 col-xs-2"></div>
+                        <div class="col-md-5 col-xs-8 text-center text-white">
                             <h1 class="fw-bold text-uppercase">Kelp Shake: The Taste of Bikini Bottom!</h1>
-                            <p class="fs-5">SpongeBob's favorite shake is now yours to enjoy&mdash;light, frothy, and kelp-tastic!</p>
+                            <p>SpongeBob's favorite shake is now yours to enjoy&mdash;light, frothy, and kelp-tastic!</p>
                             <a href="#" class="btn btn-pill text-white px-4">Get Your Kelp Fix Today!</a>
                         </div>
-                        <div class="col-2"></div>
+                        <div class="col-md-2 col-xs-2"></div>
                     </div>
                 </div>
             </div>
@@ -140,8 +279,8 @@
     <div class="container">
         <div class="row">
             <div class="col-12 text-center my-5">
-                <h2 class="fw-normal">An ocean of flavor in every sip&mdash;hydrate Bikini Bottom style!</h2>
-                <p class="fw-bold fs-2">Experience the Kelp Craze!</p>
+                <h2 class="fw-normal mb-0">An ocean of flavor in every sip&mdash;hydrate Bikini Bottom style!</h2>
+                <p class="fw-bold fs-2 mb-0">Experience the Kelp Craze!</p>
             </div>
         </div>
     </div>
@@ -149,26 +288,134 @@
     <div class="container mb-3">
         <div class="row justify-content-center">
             <div class="col origin-card d-flex flex-column justify-content-center align-items-center">
-                <h2>The Origin of Kelp Shake</h2>
-                <p class="fs-5">From the kelp fields of Bikini Bottom to your cup&mdash;learn about the iconic Kelp Shake!</p>
-                <a href="#" class="btn rounded-pill btn-pill-secondary text-white px-4">Learn More</a>
+                <div class="row w-100">
+                    <div class="col-md-5 text-center">
+                        <h2 class="fw-bold">The Origin of Kelp Shake</h2>
+                        <p class="fw-light fs-5 mb-3">From the kelp fields of Bikini Bottom to your cup&mdash;learn about the iconic Kelp Shake!</p>
+                        <a href="#" class="btn rounded-pill btn-pill-secondary text-white px-4">Learn More</a>
+                    </div>
+                    <div class="col-7"></div>
+                </div>
+                
             </div>
         </div>
     </div>
     
-    <div class="container mb-5">
+    <div class="container">
         <div class="row justify-content-center">
-            <div class="col origin-card d-flex flex-column justify-content-center align-items-center">
-                <h2>Discover Your Favorite Kelp Shake</h2>
-                <p class="fs-5">Try them all&mdash;fresh, frothy, and full of undersea flavor!</p>
-                <a href="#" class="btn rounded-pill btn-pill-secondary text-white px-4">Classic Kelp Shake</a>
-                <a href="#" class="btn rounded-pill btn-pill-secondary text-white px-4">Seaform Citrus</a>
-                <a href="#" class="btn rounded-pill btn-pill-secondary text-white px-4">Bubbleberry Twist</a>
+            <div class="col discover-card d-flex flex-column justify-content-center align-items-center text-white text-center">
+                <h2 class="fw-bold">Discover Your Favorite Kelp Shake</h2>
+                <p class="fw-light fs-5 mb-3">Try them all&mdash;fresh, frothy, and full of undersea flavor!</p>
+                <div class="d-flex gap-3">
+                    <a href="#" class="btn rounded-pill btn-pill-secondary text-white px-4">Classic Kelp Shake</a>
+                    <a href="#" class="btn rounded-pill btn-pill-secondary text-white px-4">Seaform Citrus</a>
+                    <a href="#" class="btn rounded-pill btn-pill-secondary text-white px-4">Bubbleberry Twist</a>
+                </div>
             </div>
         </div>
     </div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.js"></script> -->
+    
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col rewards-card d-flex flex-column justify-content-center align-items-center">
+                <div class="row">
+                    <div class="col-2"></div>
+                    <div class="col-10 text-center">
+                        <h2 class="fw-bold">Earn Perks with Every Shake</h2>
+                        <p class="mb-3">Join the Kelp Shake Club and enjoy exclusive perks, rewards, and more!</p>
+                        <a href="#" class="btn rounded-pill btn-pill-red text-white px-4 mb-3" style="font-size: .8rem;">Earn Rewards</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="fw-bold mb-3">What Bikini Bottom is Saying!</h2>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container-fluid mb-5">
+        <div class="row justify-content-center">
+            <div class="col-md-4 reviewSS d-flex flex-column justify-content-end pb-4 align-items-center text-center">
+                <h5 class="fw-bold mb-1" style="font-size: calc(1rem + 0.5vw);">“This shake is kelp-tacular!”</h5>
+                <p class="fw-light mb-0" style="font-size: calc(0.8rem + 0.4vw);">– SpongeBob SquarePants</p>
+            </div>
+            <div class="col-md-4 reviewPS d-flex flex-column justify-content-end pb-4 align-items-center text-center">
+                <h5 class="fw-bold mb-1" style="font-size: calc(1rem + 0.5vw);">“It’s bubbly goodness!”</h5>
+                <p class="fw-light mb-0" style="font-size: calc(0.8rem + 0.4vw);">– Patrick Star</p>
+            </div>
+            <div class="col-md-4 reviewST d-flex flex-column justify-content-end pb-3 align-items-center text-center">
+                <h5 class="fw-bold mb-1" style="font-size: calc(1rem + 0.5vw);">“It’s drinkable...<br>if you’re into that sort of thing.”</h5>
+                <p class="fw-light mb-0" style="font-size: calc(0.8rem + 0.4vw);">- Squidward Tentacles</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- footer -->
+    <footer class="footer pt-5 pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-3 text-center">
+                    <img src="images/footerlogo.png" alt="" width="136" class="mb-4">
+                    <h5 class="fw-bold">Stay bubbled up with the latest Kelp Shake News!</h5>
+                    <a href="#" class="text-white fs-2 me-3"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-white fs-2 me-3"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="text-white fs-2 me-3"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="text-white fs-2"><i class="bi bi-youtube"></i></a>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <h5 class="fw-bold text-uppercase mb-4">Explore</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-1"><a href="#" class="text-white text-decoration-none">Classic Kelp Shake</a></li>
+                        <li class="mb-1"><a href="#" class="text-white text-decoration-none">Limited Edition Flavors</a></li>
+                        <li class="mb-1"><a href="#" class="text-white text-decoration-none">Build Your Own Shake</a></li>
+                        <li class="mb-1"><a href="#" class="text-white text-decoration-none">Kelp Shake Nutrition</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <h5 class="fw-bold text-uppercase mb-4">Kelp Shake in the Ocean</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-1"><a href="#" class="text-white text-decoration-none">Bikini Bottom</a></li>
+                        <li class="mb-1"><a href="#" class="text-white text-decoration-none">Rock Bottom</a></li>
+                        <li class="mb-1"><a href="#" class="text-white text-decoration-none">Goo Lagoon</a></li>
+                        <li class="mb-1"><a href="#" class="text-white text-decoration-none">Jellyfish Fields</a></li>
+                        <li class="mb-1"><a href="#" class="text-white text-decoration-none">Conch Street</a></li>
+                        <li class="mb-1"><a href="#" class="text-white text-decoration-none">Kelp Forest</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <h5 class="fw-bold text-uppercase mb-4">Resources</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-1"><a href="#" class="text-white text-decoration-none">Careers</a></li>
+                        <li class="mb-1"><a href="#" class="text-white text-decoration-none">About Kelp Shake</a></li>
+                        <li class="mb-1"><a href="#" class="text-white text-decoration-none">Environmental Mission</a></li>
+                        <li class="mb-1"><a href="#" class="text-white text-decoration-none">Partner With Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; <span id="currentYear"></span> KELP CO. ALL RIGHTS RESERVED</p>
+                    <p class="mb-0">
+                        <a href="#" class="text-white text-decoration-none">Send a Message in a Bubble</a> | 
+                        <a href="#" class="text-white text-decoration-none">Frequently Asked Kelp-estions</a> | 
+                        <a href="#" class="text-white text-decoration-none">Kelp Shake Rules</a> | 
+                        <a href="#" class="text-white text-decoration-none">Privacy Under the Sea</a> | 
+                        <a href="#" class="text-white text-decoration-none">Bikini Bottom Regulations</a> | 
+                        <a href="#" class="text-white text-decoration-none">Treasure Map</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
