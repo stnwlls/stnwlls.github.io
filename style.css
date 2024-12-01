@@ -1,235 +1,153 @@
-html {
-    background-color: #F2E9D7;
-    scroll-behavior: smooth !important;
+:root {
+  --color-white: #ffffff;
+  --color-lightblue: #8ab2d4;
+  --font-jura: "Jura", sans-serif;
 }
 
-h1, h2, h3, .navbar, .button, .cta {
-    font-family: "Outfit", system-ui;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    letter-spacing: 0.03em;
+html, body {
+  cursor: crosshair;
 }
 
-.bodytext, .secondtext, .footertext {
-    font-family: "Roboto", system-ui;
-    font-weight: 400;
-    font-style: normal;
+body {
+  background-color: hsla(330, 0%, 5%, 1);
+  background-image: 
+  radial-gradient(at 80% 80%, hsla(240, 75%, 34%, 1) 0px, transparent 50%),
+  radial-gradient(at 26% 70%, hsla(262, 20%, 34%, 1) 0px, transparent 50%),
+  radial-gradient(at 77% 18%, hsla(240, 38%, 34%, 1) 0px, transparent 50%),
+  radial-gradient(at 6% 8%, hsla(240, 45%, 34%, 1) 0px, transparent 50%);
+  background-attachment: fixed;
+  font-family: var(--font-jura);
+  color: var(--color-lightblue);
+}
+
+.home {
+  position: fixed;
+  top: 2%;
+  left: 2%;
+  font-size: 1.5em;
+  text-decoration: none;
+  color: var(--color-lightblue);
+}
+
+.home:hover {
+  cursor: crosshair;
+  color: var(--color-white);
+  transition: color 0.5s;
+}
+
+.sites {
+  position: fixed;
+  right: 2%;
+  font-size: 1.5em;
+}
+
+.sites ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.sites a {
+  color: var(--color-lightblue);
+  margin-left: 15px;
+}
+
+.sites a:hover {
+  cursor: crosshair;
+  color: var(--color-white);
+  transition: color 0.5s;
 }
 
 .navbar {
-    display: flex;
-    justify-content: center;
-    font-size: 1.125rem;
-    background-color: #4F6C99;
-    border-radius: 20px;
-    width: 60%;
-    height: 40px;
-    margin: 30px auto 0 auto;
-    align-items: center;
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  font-size: 1.5em;
 }
 
 .navbar ul {
-    display: flex;
-    width: 100%;
-    padding: 20px;
-}
-
-.navbar li {
-    list-style-type: none;
+  display: flex;
+  list-style-type: none;
 }
 
 .navbar a {
-    text-decoration: none;
-    color: #F2E9D7;
+  color: var(--color-lightblue);
+  text-decoration: none;
 }
 
-.navlink:hover {
-    color: #F2E9D7;
-    border-top: 3px solid #F2E9D7;
-    border-left: 3px solid #F2E9D7;
-    padding-left: 5px;
-    margin-bottom: -5px;
-    margin-left: 22px;
+.navbar a:hover {
+  cursor: crosshair;
+  color: var(--color-white);
+  transition: color 0.5s;
 }
 
-.active, .dropdown-menu .active {
-    color: #F2E9D7;
-    border-top: 3px solid #F2E9D7;
+.active a {
+  color: var(--color-white);
 }
 
-.logo {
-    margin-right: auto;
+.hello {
+  position: fixed;
+  top: 50%;
+  left: 50%;
 }
 
-.navlink {
-    margin: 0 30px;
-    justify-content: space-between;
+/* about */
+
+.about {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  right: 20%;
 }
 
-.navcirc {
-    padding: 0 2px;
+.austin {
+  width: 500px;
+  height: 500px;
+  position: fixed;
+  bottom: 25%;
+  left: 15%;
+  animation: rotatingBorderRadius 6s linear infinite;
+  box-shadow: 0 0 100px 1px hsl(0, 0%, 100%, 0.1);
 }
 
-.circ {
-    color: #4F6C99;
-    background-color: #F2E9D7;
-    padding: 5px 8px;
-    border-radius: 50%;
+/* Keyframes for rotating border-radius */
+@keyframes rotatingBorderRadius {
+  0% {
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  }
+  25% {
+    border-radius: 60% 40% 50% 50% / 50% 70% 30% 50%;
+  }
+  50% {
+    border-radius: 40% 60% 60% 40% / 60% 40% 50% 70%;
+  }
+  75% {
+    border-radius: 50% 50% 40% 60% / 70% 50% 50% 30%;
+  }
+  100% {
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  }
 }
 
-.hero {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: auto;
-    padding: 0;
-    width: 70%;
-    margin-top: 200px;
+/* portfolio */
+
+
+/* contact */
+
+
+/* media queries */
+
+@media (max-width: 1200px) {
+  /* Styles for screens smaller than 1200px (large devices) */
 }
 
-.text-content {
-    display: flex;
-    flex-direction: column;
-    margin: 0 0 0 50px;
+@media (max-width: 992px) {
+  /* Styles for screens smaller than 992px (medium devices) */
 }
 
-.name {
-    color: #4F6C99;
-    font-size: 4rem;
-    font-weight: bold;
-    margin: 0;
+@media (max-width: 768px) {
+  /* Styles for screens smaller than 768px (tablets) */
 }
 
-.tagline {
-    color: #222222;
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin: 0;
-}
-
-.graphic {
-    width: 600px;
-}
-
-.indlink {
-    display: flex;
-    justify-content: center;
-    text-decoration: none;
-    color: #F2E9D7;
-    margin-top: 200px;
-    gap: 20px;
-}
-
-.indbut {
-    background-color: #4F6C99;
-    color: #F2E9D7;
-    padding: 10px 20px;
-    border-radius: 20px;
-    text-decoration: none;
-    font-weight: bold;
-    flex: 1;
-    text-align: center;
-    max-width: 10%;
-}
-
-.indbut:hover {
-    background-color: #F2E9D7;
-    color: #4F6C99;
-    border: 2px solid #4F6C99;
-    padding: 8px 18px;
-    font-weight: bold;
-}
-
-.portlink {
-    margin-top: 200px;
-}
-
-.aboutme {
-    margin: auto;
-    padding: 0;
-    width: 60%;
-    padding-top: 60px;
-    margin-top: 140px;
-    margin-bottom: 100px;
-}
-
-.aboutme img {
-    height: 550px;
-    width: 550px;
-    float: left;
-    margin-right: 30px;
-}
-
-.aboutme .aboutcontainer {
-    display: flex;
-    align-items: center;
-}
-
-.aboutme h2 {
-    color: #222222;
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin: 20px 0 20px 0;
-}
-
-.aboutme p {
-    color: #222222;
-    font-size: 1rem;
-    font-weight: 400;
-    margin: 0;
-    /* text-transform: lowercase; */
-}
-
-.footer {
-    position:fixed;
-    bottom:0;
-    right: 30px;
-}
-
-/* Dropdown Menu Styles */
-
-.navbar .navlink.dropdown {
-    position: relative;
-}
-
-.navbar .navlink.dropdown ul {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #4F6C99;
-    border-radius: 0 0 20px 20px;
-    padding: 0;
-    list-style: none;
-    min-width: 150px;
-    z-index: 1000;
-}
-
-.navbar .navlink.dropdown:hover ul {
-    display: block;
-}
-
-.navbar .navlink.dropdown ul li {
-    margin: 0;
-}
-
-.navbar .navlink.dropdown ul li a {
-    background-color: #4F6C99;
-    color: #F2E9D7;
-    padding: 10px 5px;
-    margin: 5px 10px 3px 10px;
-    display: block;
-    text-decoration: none;
-}
-
-.navbar .navlink.dropdown ul li a:hover {
-    color: #F2E9D7;
-    border-top: 3px solid #F2E9D7;
-    border-left: 3px solid #F2E9D7;
+@media (max-width: 576px) {
+  /* Styles for screens smaller than 576px (mobile devices) */
 }
