@@ -12,15 +12,17 @@
 </head>
 <body>
   
-  <a href="index.html" class="home">austinwells.dev</a>
-  
-  <section class="sites">
-    <ul>
-      <li><a href="https://github.com/stnwlls" target="_blank"><i class="bi bi-github"></i></a></li>
-      <li><a href="https://www.linkedin.com/in/austinhwells" target="_blank"><i class="bi bi-linkedin"></i></a></li>
-      <li><a href="resume.pdf" target="_blank"><i class="bi bi-file-person"></i></a></li>
-    </ul>
-  </section>
+  <nav class="topnav">
+    <a href="index.html" class="home">austinwells.dev</a>
+    
+    <section class="sites">
+      <ul>
+        <li><a href="https://github.com/stnwlls" target="_blank"><i class="bi bi-github"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/austinhwells" target="_blank"><i class="bi bi-linkedin"></i></a></li>
+        <li><a href="resume.pdf" target="_blank"><i class="bi bi-file-person"></i></a></li>
+      </ul>
+    </section>  
+  </nav>
   
   <nav class="navbar">
     <ul>
@@ -30,6 +32,23 @@
       <li class="active"><a href="contact.html">contact</a></li>
     </ul>
   </nav>
+
+  <section class="contact-form">
+    <h2>get in touch with me</h2>
+    <a href="mailto: hello@austinwells.dev">hello@austinwells.dev</a>
+    <form action="submit_form.php" method="post">
+      <label for="name">name</label>
+      <input type="text" id="name" name="name" required>
+      
+      <label for="email">email</label>
+      <input type="email" id="email" name="email" required>
+      
+      <label for="message">message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+      
+      <button type="submit">send</button>
+    </form>
+  </section>
     
 </body>
 </html>

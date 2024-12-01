@@ -1,15 +1,20 @@
 :root {
   --color-white: #ffffff;
+  --color-black: #0d0d0d;
   --color-lightblue: #8ab2d4;
   --font-jura: "Jura", sans-serif;
+  --font-size-base: 16px;
+  --navbar-spacing: 2%;
 }
 
 html, body {
   cursor: crosshair;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  background-color: hsla(330, 0%, 5%, 1);
+  background-color: var(--color-black);
   background-image: 
   radial-gradient(at 80% 80%, hsla(240, 75%, 34%, 1) 0px, transparent 50%),
   radial-gradient(at 26% 70%, hsla(262, 20%, 34%, 1) 0px, transparent 50%),
@@ -20,10 +25,18 @@ body {
   color: var(--color-lightblue);
 }
 
-.home {
+.topnav {
+  display: flex;
+  justify-content: space-between;
   position: fixed;
-  top: 2%;
-  left: 2%;
+  top: 0;
+  width: 96%;
+  padding: var(--navbar-spacing);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+.home {
   font-size: 1.5em;
   text-decoration: none;
   color: var(--color-lightblue);
@@ -36,14 +49,14 @@ body {
 }
 
 .sites {
-  position: fixed;
-  right: 2%;
   font-size: 1.5em;
 }
 
 .sites ul {
   display: flex;
   list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .sites a {
@@ -59,14 +72,20 @@ body {
 
 .navbar {
   position: fixed;
-  bottom: 2%;
-  right: 2%;
+  bottom: 0;
+  width: 96%;
+  padding: var(--navbar-spacing);
   font-size: 1.5em;
+  backdrop-filter: blur(10px);
+  z-index: 1000;
 }
 
 .navbar ul {
   display: flex;
   list-style-type: none;
+  margin: 0;
+  padding: 0;
+  justify-content: flex-end;
 }
 
 .navbar a {
@@ -85,28 +104,33 @@ body {
 }
 
 .hello {
-  position: fixed;
-  top: 50%;
-  left: 50%;
+  width: 60%;
+  margin: 50vh auto 0 auto;
+}
+
+.hello-world p, .name h1, .role > h1 {
+  padding: 0;
+  margin: 0;
 }
 
 /* about */
 
+.about-container {
+  display: flex;
+  align-items: center;
+  margin: 25vh auto 0 auto;
+  width: 60%;
+}
+
 .about {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  right: 20%;
+  margin-left: 2rem;
+  display: flex;
 }
 
 .austin {
-  width: 500px;
-  height: 500px;
-  position: fixed;
-  bottom: 25%;
-  left: 15%;
+  height: 40vh;
   animation: rotatingBorderRadius 6s linear infinite;
-  box-shadow: 0 0 100px 1px hsl(0, 0%, 100%, 0.1);
+  box-shadow: 0 0 6rem .06rem hsl(0, 0%, 100%, 0.1);
 }
 
 /* Keyframes for rotating border-radius */
@@ -130,24 +154,122 @@ body {
 
 /* portfolio */
 
+.checkback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 25vh auto 0 auto;
+}
 
 /* contact */
 
-
-/* media queries */
-
-@media (max-width: 1200px) {
-  /* Styles for screens smaller than 1200px (large devices) */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 25vh auto 0 auto;
+  width: 40%;
 }
 
-@media (max-width: 992px) {
-  /* Styles for screens smaller than 992px (medium devices) */
+.contact-form h2 {
+  margin: 0;
 }
 
-@media (max-width: 768px) {
-  /* Styles for screens smaller than 768px (tablets) */
+.contact-form a {
+  margin-top: 1vh;
+  color: var(--color-lightblue);
+  text-decoration: none;
 }
 
-@media (max-width: 576px) {
-  /* Styles for screens smaller than 576px (mobile devices) */
+.contact-form a:hover {
+  cursor: crosshair;
+  color: var(--color-white);
+  transition: color 0.5s;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 1vh;
+}
+
+.contact-form label {
+  margin: 1rem;
+}
+
+.contact-form input, .contact-form textarea {
+  font-family: var(--font-jura);
+  margin: 0 1rem;
+  padding: 0.5rem;
+  border: none;
+  background-color: var(--color-black);
+  color: var(--color-lightblue);
+  caret-color: var(--color-lightblue);
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+  outline: none;
+  border: 1px solid var(--color-lightblue);
+  transition: border 0.5s;
+}
+
+.contact-form button {
+  margin: 1rem;
+  padding: 0.5rem;
+  border: none;
+  background-color: var(--color-black);
+  color: var(--color-lightblue);
+}
+
+.contact-form button:hover {
+  background-color: var(--color-lightblue);
+  color: var(--color-black);
+  transition: background-color 0.5s, color 0.5s;
+}
+
+/* Media Queries */
+
+/* Phone Portrait */
+@media (max-width: 430px) {
+  .about-container {
+    margin-top: 10vh;
+  }
+
+  .hello {
+    width: 80%;
+  }
+
+  .contact-form {
+    margin-top: 20vh;
+    width: 80%;
+  }
+}
+
+/* Tablet Portrait */
+@media (max-width: 820px) {
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about {
+    margin-top: 50px;
+    margin-left: 0;
+  }
+
+  .contact-form {
+    margin-top: 20vh;
+    width: 80%;
+  }
+}
+
+/* Tablet Landscape */
+@media (max-width: 1303px) {
+  .about-container {
+    width: 80%;
+  }
+
+  .contact-form {
+    margin-top: 20vh;
+  }
 }
