@@ -203,7 +203,8 @@ body {
   margin: 0 1rem;
   padding: 0.5rem;
   border: none;
-  background-color: var(--color-black);
+  background-color: transparent;
+  border: 1px solid var(--color-lightblue);
   color: var(--color-lightblue);
   caret-color: var(--color-lightblue);
 }
@@ -218,7 +219,8 @@ body {
   margin: 1rem;
   padding: 0.5rem;
   border: none;
-  background-color: var(--color-black);
+  background-color: transparent;
+  border: 1px solid var(--color-lightblue);
   color: var(--color-lightblue);
 }
 
