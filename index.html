@@ -33,6 +33,12 @@
     </ul>
   </nav>
   
+  <section class="quicklinks">
+    <a href="about.html">>> meet me</a>
+    <a href="portfolio.html">>> my work</a>
+    <a href="contact.html">>> say hello</a>
+  </section>
+  
   <section class="hello">
     <div class="hello-world">
       <p></p>
@@ -54,28 +60,33 @@
     
     function typeText(elementObj, callback) {
       const { element, text } = elementObj;
-      let index = 0;
+      let i = 0;
       
       function addChar() {
-        if (index < text.length) {
-          element.textContent += text[index];
-          index++;
-          setTimeout(addChar, 100);
+        if (i < text.length) {
+          element.textContent += text[i];
+          i++;
+          setTimeout(addChar, 60);
         } else if (callback) {
           callback();
-        }
+        }   
       }
       
       addChar();
     }
     
-    function sequentialTyping(index = 0) {
-      if (index < elements.length) {
-        typeText(elements[index], () => sequentialTyping(index + 1));
+    function sequentialTyping(i = 0) {
+      if (i < elements.length) {
+        typeText(elements[i], () => sequentialTyping(i + 1));
       }
     }
     
     sequentialTyping();
+
+    // const quicklinks = document.querySelector('.quicklinks');
+    // const links = quicklinks.querySelectorAll('a');
+
+    // if ()
   </script>
 </body>
 </html>

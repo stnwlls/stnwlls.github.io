@@ -103,9 +103,32 @@ body {
   color: var(--color-white);
 }
 
-.hello {
+.quicklinks {
   width: 60%;
   margin: 50vh auto 0 auto;
+}
+
+.quicklinks a {
+  color: var(--color-lightblue);
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+.quicklinks a:nth-child(2),
+.quicklinks a:nth-child(3) {
+  margin-left: 1rem;
+}
+
+.quicklinks a:hover {
+  cursor: crosshair;
+  color: var(--color-white);
+  transition: color 0.5s;
+}
+
+.hello {
+  width: 60%;
+  margin: 1vh auto 0 auto;
 }
 
 .hello-world p, .name h1, .role > h1 {
