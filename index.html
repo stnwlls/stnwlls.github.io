@@ -33,12 +33,6 @@
     </ul>
   </nav>
   
-  <section class="quicklinks">
-    <a href="about.html">>> meet me</a>
-    <a href="portfolio.html">>> my work</a>
-    <a href="contact.html">>> say hello</a>
-  </section>
-  
   <section class="hello">
     <div class="hello-world">
       <p></p>
@@ -49,6 +43,12 @@
     <div class="role">
       <h1></h1>
     </div>
+  </section>
+
+  <section class="quicklinks" style="opacity: 0; transition: opacity 1.5s;">
+    <a href="about.html">>> meet me</a>
+    <a href="portfolio.html">>> my work</a>
+    <a href="contact.html">>> say hello</a>
   </section>
   
   <script>
@@ -83,10 +83,11 @@
     
     sequentialTyping();
 
-    // const quicklinks = document.querySelector('.quicklinks');
-    // const links = quicklinks.querySelectorAll('a');
+    const quicklinks = document.querySelector('.quicklinks');
 
-    // if ()
+    setTimeout(() => {
+      quicklinks.style.opacity = 1;
+    }, 3200);
   </script>
 </body>
 </html>
