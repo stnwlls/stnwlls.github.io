@@ -150,7 +150,7 @@ class PortfolioProjects {
       const figmaLink = document.createElement('a');
       figmaLink.href = project.links.figma;
       figmaLink.target = '_blank';
-      figmaLink.innerHTML = '<i class="bi bi-vector-pen"></i>'; // Use an icon of your choice
+      figmaLink.innerHTML = '<i class="bi bi-vector-pen"></i>';
       figmaLink.className = 'project-link-figma';
       links.appendChild(figmaLink);
     }
@@ -159,7 +159,7 @@ class PortfolioProjects {
       const adobeXDLink = document.createElement('a');
       adobeXDLink.href = project.links.adobeXD;
       adobeXDLink.target = '_blank';
-      adobeXDLink.innerHTML = '<i class="bi bi-vector-pen"></i>'; // Use an icon of your choice
+      adobeXDLink.innerHTML = '<i class="bi bi-vector-pen"></i>';
       adobeXDLink.className = 'project-link-adobeXD';
       links.appendChild(adobeXDLink);
     }
@@ -168,7 +168,7 @@ class PortfolioProjects {
       const imagelink = document.createElement('a');
       imagelink.href = project.links.imagelink;
       imagelink.target = '_blank';
-      imagelink.innerHTML = '<i class="bi bi-image"></i>'; // Use an icon
+      imagelink.innerHTML = '<i class="bi bi-image"></i>';
       imagelink.className = 'project-link-imagelink';
       links.appendChild(imagelink);
     }

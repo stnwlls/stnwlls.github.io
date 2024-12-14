@@ -262,14 +262,12 @@ body {
 
 .project-card-wrapper {
   display: flex;
-  /* align-items: center; */
 }
 
 .project-image-container {
-  height: 150px;  
   width: 250px;
   margin-right: 1rem;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .project-image {
@@ -426,8 +424,30 @@ body {
     width: 80%;
     margin-bottom: 100px;
   }
+
+  .project-container {
+    width: 90%;
+  }
   
-  
+  .project-card-wrapper {
+    flex-direction: column;
+  }
+
+  .project-image-container {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .project-links a {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+  }
+
+  .project-hashtags {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 /* Tablet Landscape */

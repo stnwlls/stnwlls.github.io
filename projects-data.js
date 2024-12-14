@@ -13,7 +13,7 @@ const projectsData = [
       "#css",
       "#javascript"
     ],
-    image: "https://placehold.co/150x250",
+    image: "/images/project-images/11.png",
   },
   {
     title: "Bootstrap Project: Kelp Shake Webpage",
@@ -30,7 +30,7 @@ const projectsData = [
       "#bootstrap",
       "#rwd"
     ],
-    image: "https://placehold.co/150x250"
+    image: "/images/project-images/10.png"
   },
   // {
   //   title: "Bootstrap Responsive Web Page Design",
@@ -47,7 +47,7 @@ const projectsData = [
   //     "#bootstrap",
   //     "#rwd"
   //   ],
-  //   image: "https://placehold.co/150x250",
+  //   image: "https://placehold.co/250x150",
   // },
   {
     title: "Content Audit and Redesign in Figma",
@@ -64,7 +64,7 @@ const projectsData = [
       "#uxdesign",
       "#uidesign"
     ],
-    image: "https://placehold.co/150x250"
+    image: "/images/project-images/9.png"
   },
   {
     title: "Usability Test",
@@ -78,7 +78,7 @@ const projectsData = [
       "#usabilitytesting",
       "#uxresearch"
     ],
-    image: "https://placehold.co/150x250"
+    image: "/images/project-images/8.png"
   },
   {
     title: "A/B Testing Mobile App Prototype in Figma",
@@ -96,7 +96,7 @@ const projectsData = [
       "#uxdesign",
       "#uidesign"
     ],
-    image: "https://placehold.co/150x250"
+    image: "/images/project-images/7.png"
   },
   {
     title: "Kelp Shake Prototype in Adobe XD",
@@ -113,7 +113,7 @@ const projectsData = [
       "#uidesign",
       "#prototyping"
     ],
-    image: "https://placehold.co/150x250"
+    image: "/images/project-images/6.png"
   },
   {
     title: "Wireframe Design in Figma",
@@ -129,7 +129,7 @@ const projectsData = [
       "#wireframe",
       "#uxdesign"
     ],
-    image: "https://placehold.co/150x250"
+    image: "/images/project-images/5.png"
   },
   {
     title: "Site Map Creation in FigJam",
@@ -145,7 +145,7 @@ const projectsData = [
       "#sitemap",
       "#uxdesign"
     ],
-    image: "https://placehold.co/150x250"
+    image: "/images/project-images/4.jpg"
   },  
   {
     title: "Three Page Website with CSS Grid",
@@ -162,7 +162,7 @@ const projectsData = [
       "#bootstrap", 
       "#rwd"
     ],
-    image: "https://placehold.co/150x250"
+    image: "/images/project-images/3.png"
   },
   {
     title: "Showcasing CSS Techniques",
@@ -177,7 +177,7 @@ const projectsData = [
       "#html", 
       "#css"
     ],
-    image: "https://placehold.co/150x250"
+    image: "/images/project-images/2.png"
   },
   {
     title: "Webpage with External Data Integration",
@@ -194,7 +194,7 @@ const projectsData = [
       "#json", 
       "#xml"
     ],
-    image: "https://placehold.co/150x250"
+    image: "/images/project-images/1.png"
   }
 ];
 
