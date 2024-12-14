@@ -157,7 +157,7 @@ body {
   box-shadow: 0 0 6rem .06rem hsl(0, 0%, 100%, 0.1);
 }
 
-/* Keyframes for rotating border-radius */
+/* keyframes for rotating border-radius */
 @keyframes rotatingBorderRadius {
   0% {
     border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
