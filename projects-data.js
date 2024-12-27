@@ -1,18 +1,18 @@
 const projectsData = [
-  // {
-  //   title: "Party Flyer",
-  //   description: "Created a custom flyer for Mill's Modern Social in Tempe, AZ, for their Christmas Party, which also doubled as a going-away party for an employee. Designed using Photoshop, this project showcases skills in graphic design, branding, and event promotion. The flyer combines festive and personal elements, featuring custom illustrations, typography, and a visually appealing layout to capture the theme of the event.",
-  //   month: "December",
-  //   year: 2024,
-  //   links: {
-  //     imagelink: "/projects/millsChristmasLeaveFlyer.jpg",
-  //   },
-  //   hashtags: [
-  //     "#photoshop",
-  //     "#graphicdesign"
-  //   ],
-  //   image: "/images/project-images/12.jpg"
-  // },
+  {
+    title: "Party Flyer",
+    description: "Created a custom flyer for Mill's Modern Social in Tempe, AZ, for their Christmas Party, which also doubled as a going-away party for an employee. Designed using Photoshop, this project showcases skills in graphic design, branding, and event promotion. The flyer combines festive and personal elements, featuring custom illustrations, typography, and a visually appealing layout to capture the theme of the event.",
+    month: "December",
+    year: 2024,
+    links: {
+      imagelink: "/projects/millsChristmasLeaveFlyer.jpg",
+    },
+    hashtags: [
+      "#photoshop",
+      "#graphicdesign"
+    ],
+    image: "/images/project-images/12.jpg"
+  },
   {
     title: "JavaScript Calculator",
     description: "Developed a functional calculator application using HTML, CSS, and JavaScript. The interface is designed to replicate the aesthetic of an iPhone calculator, featuring responsive buttons, a sleek layout, and accurate calculations. Key functionalities include basic arithmetic operations, toggle for negative/positive numbers, and error handling for invalid inputs.",
