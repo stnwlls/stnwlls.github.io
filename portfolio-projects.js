@@ -49,6 +49,15 @@ class PortfolioProjects {
       
       buttonsWrapper.appendChild(button);
     });
+
+    // Clear Filters Button
+    const clearButton = document.createElement('button');
+    clearButton.textContent = 'Clear Filters';
+    clearButton.className = 'project-filter-clear-button';
+    clearButton.addEventListener('click', () => {
+      this.clearHashtagFilters();
+    });
+    buttonsWrapper.appendChild(clearButton);
     
     filterTitle.appendChild(filterIcon);
     filterContainer.appendChild(filterTitle);
@@ -70,6 +79,14 @@ class PortfolioProjects {
     this.renderProjects();
   }
   
+  // Clear all hashtag filters
+  clearHashtagFilters() {
+    this.selectedHashtags = [];
+    const buttons = this.container.querySelectorAll('.project-filter-button');
+    buttons.forEach(button => button.classList.remove('project-filter-button-active'));
+    this.renderProjects();
+  }
+
   // Setup filter buttons
   setupHashtagFilters() {
     const filterContainer = this.createFilterButtons();

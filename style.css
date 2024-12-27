@@ -114,6 +114,8 @@ body {
 }
 
 .quicklinks {
+  display: flex;
+  flex-wrap: wrap;
   width: 60%;
   margin: 1vh auto 0 auto;
 }
@@ -254,6 +256,21 @@ body {
 .project-filter-button-active {
   color: var(--color-black);
   background-color: var(--color-lightblue);
+}
+
+.project-filter-clear-button {
+  color: var(--color-lightblue);
+  background-color: transparent;
+  border: 1px solid var(--color-lightblue);
+  border-radius: none;
+  padding: 0.3rem;
+}
+
+.project-filter-clear-button:hover {
+  cursor: pointer;
+  color: var(--color-black);
+  background-color: var(--color-lightblue);
+  transition: color 0.5s, background-color 0.5s;
 }
 
 .project-timeline {
@@ -409,6 +426,15 @@ body {
 
 /* Tablet Portrait */
 @media (max-width: 820px) {
+  .quicklinks {
+    flex-direction: column;
+  }
+
+  .quicklinks a {
+    margin-top: 1rem !important;
+    margin-left: 0 !important;
+  }
+  
   .about-container {
     flex-direction: column;
   }
