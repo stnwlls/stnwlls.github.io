@@ -346,7 +346,6 @@ body {
 .contact-form a {
   margin-top: 1vh;
   color: var(--color-lightblue);
-  text-decoration: none;
 }
 
 .contact-form a:hover {
