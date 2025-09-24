@@ -19,7 +19,7 @@ const projectsData = [
     month: "November",
     year: 2024,
     links: {
-      github: "https://github.com/stnwlls/JSCalculator", // Add a GitHub link here
+      github: "https://github.com/stnwlls/JSCalculator",
       live: "/projects/jscalculator/calculator.html"
     },
     hashtags: [
@@ -70,7 +70,7 @@ const projectsData = [
     year: 2024,
     links: {
       imagelink: "/projects/MemorialHealthRedesign.png",
-      figma: "https://www.figma.com/design/Pn2gWzyC0xNgUyZNxTUiw3/MemorialHealth.com-Redesign?node-id=0-1&t=51DfiOa4aWh5j1YC-1"
+      figma: "https://www.figma.com/design/malDhWIrAcl9GaCXQwtiDn/MemorialHealth.com-Redesign?m=auto&t=PgeJ28VkPvXK8PiC-1"
     },
     hashtags: [
       "#figma",
@@ -101,7 +101,7 @@ const projectsData = [
     year: 2024,
     links: {
       imagelink: "/projects/tourviewAppABTesting.png",
-      figma: "https://www.figma.com/design/hdSsIvCViqqQwjY8E6VIbR/tourviewAppABtesting?node-id=0-1&t=UG0HAuUumVha94cf-1"
+      figma: "https://www.figma.com/design/lh2C2bMnTbdk7M2u49qQXw/tourviewAppABtesting?m=auto&t=PgeJ28VkPvXK8PiC-1"
     },
     hashtags: [
       "#figma",
@@ -136,7 +136,7 @@ const projectsData = [
     year: 2024,
     links: {
       imagelink: "/projects/orbitmediaWireframe.png",
-      figma: "https://www.figma.com/design/WPT1PFGcqG4dJHvqBLySnH/orbitmedia.com-Wireframe?node-id=303-5555&t=KxIYrLS2ooxaxGqC-1"
+      figma: "https://www.figma.com/design/T20hYYDkY7geaG3tY6cfAT/orbitmedia.com-Wireframe?m=auto&t=PgeJ28VkPvXK8PiC-1"
     },
     hashtags: [
       "#figma",
@@ -152,7 +152,7 @@ const projectsData = [
     year: 2024,
     links: {
       imagelink: "/projects/phxrisingSiteMap.jpg",
-      figma: "https://www.figma.com/board/a8VpQT39x7YDHnHSB3WjOk/phxrisingfc.com-Site-Map?node-id=0-1&t=ejO5Hl07MSwEh5to-1"
+      figma: "https://www.figma.com/board/0hYyM6xjyQ0XiGgbP9u8IW/phxrisingfc.com-Site-Map?t=PgeJ28VkPvXK8PiC-1"
     },
     hashtags: [
       "#figma",
