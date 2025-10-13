@@ -1,18 +1,4 @@
 const projectsData = [
-  // {
-  //   title: "Party Flyer",
-  //   description: "Created a custom flyer for Mill's Modern Social in Tempe, AZ, for their Christmas Party, which also doubled as a going-away party for an employee. Designed using Photoshop, this project showcases skills in graphic design, branding, and event promotion. The flyer combines festive and personal elements, featuring custom illustrations, typography, and a visually appealing layout to capture the theme of the event.",
-  //   month: "December",
-  //   year: 2024,
-  //   links: {
-  //     imagelink: "/projects/millsChristmasLeaveFlyer.jpg",
-  //   },
-  //   hashtags: [
-  //     "#photoshop",
-  //     "#graphicdesign"
-  //   ],
-  //   image: "/images/project-images/12.jpg"
-  // },
   {
     title: "JavaScript Calculator",
     description: "Developed a functional calculator application using HTML, CSS, and JavaScript. The interface is designed to replicate the aesthetic of an iPhone calculator, featuring responsive buttons, a sleek layout, and accurate calculations. Key functionalities include basic arithmetic operations, toggle for negative/positive numbers, and error handling for invalid inputs.",
@@ -46,23 +32,6 @@ const projectsData = [
     ],
     image: "/images/project-images/10.png"
   },
-  // {
-  //   title: "Bootstrap Responsive Web Page Design",
-  //   description: "Enhanced a pre-built HTML template by integrating Bootstrap for responsive design and modern UI components. Key features include a dynamic navigation bar, an engaging carousel, and a grid-based layout for showcasing travel options. The project demonstrates proficiency in implementing Bootstrap utilities and components, including responsive breakpoints, text styling, and carousel controls, creating a professional and interactive user experience.",
-  //   month: "November",
-  //   year: 2024,
-  //   links: {
-  //     github: "a", // Placeholder for GitHub repository link
-  //     live: "a", // Placeholder for live project demo
-  //   },
-  //   hashtags: [
-  //     "#html",
-  //     "#css",
-  //     "#bootstrap",
-  //     "#rwd"
-  //   ],
-  //   image: "https://placehold.co/250x150",
-  // },
   {
     title: "Content Audit and Redesign in Figma",
     description: "Conducted a content audit and full redesign of the Memorial Health Bariatric Surgery page using Figma. The redesign focused on reorganizing content for improved user experience and readability. Key changes included consolidating large blocks of text into smaller, scannable sections with clear headings, and integrating more engaging visuals.",
@@ -79,20 +48,6 @@ const projectsData = [
       "#uidesign"
     ],
     image: "/images/project-images/9.png"
-  },
-  {
-    title: "Usability Test",
-    description: "Conducted a usability test for the Sutra Studios website, focusing on user interaction, navigation, and purchase flow. The test was performed with a participant to identify pain points and gauge the clarity of the website's purpose. This project involved recording user feedback, analyzing website usability, and providing actionable recommendations for improvement.",
-    month: "October",
-    year: 2024,
-    links: {
-      youtube: "https://www.youtube.com/watch?v=Wpamxk-HVfU"
-    },
-    hashtags: [
-      "#usabilitytesting",
-      "#uxresearch"
-    ],
-    image: "/images/project-images/8.png"
   },
   {
     title: "A/B Testing Mobile App Prototype in Figma",
@@ -112,23 +67,6 @@ const projectsData = [
     ],
     image: "/images/project-images/7.png"
   },
-  // {
-  //   title: "Kelp Shake Prototype in Adobe XD",
-  //   description: "Decided to have fun with this project by creating a webpage to promote the Kelp Shake, inspired by SpongeBob. Developed a high-fidelity prototype using Adobe XD. The project includes a fully designed layout with a responsive navigation bar, interactive elements, and a footer featuring essential links. This prototype demonstrates expertise in user experience, visual design, and cohesive branding.",
-  //   month: "October",
-  //   year: 2024,
-  //   links: {
-  //     imagelink: "/projects/kelpshakePrototype.png",
-  //     adobeXD: "https://xd.adobe.com/view/275f8527-0104-4293-8cd9-244fd51ab0ee-720c/?fullscreen"
-  //   },
-  //   hashtags: [
-  //     "#adobexd",
-  //     "#uxdesign",
-  //     "#uidesign",
-  //     "#prototyping"
-  //   ],
-  //   image: "/images/project-images/6.png"
-  // },
   {
     title: "Wireframe Design in Figma",
     description: "Developed a wireframe for the home page of orbitmedia.com using Figma. The project involved recreating the website's header, footer, and five key sections of the page based on the desktop view. This wireframe showcases expertise in visual hierarchy, content arrangement, and design tools to plan web layouts effectively. Placeholders for text and images were used to simulate content and structure, adhering to the principles of wireframing.",
@@ -178,38 +116,6 @@ const projectsData = [
     ],
     image: "/images/project-images/3.png"
   },
-  // {
-  //   title: "Showcasing CSS Techniques",
-  //   description: "Showcased proficiency in HTML and CSS skills. The project featured side-by-side layouts to comapre and media queries for adaptability. Special emphasis was placed on user experience and visual design with pull-quotes, responsive images, and embedded media.",
-  //   month: "June",
-  //   year: 2024,
-  //   links: {
-  //     github: "https://github.com/stnwlls/csstechniques",
-  //     live: "/projects/csstechniques/historyOfApple.html"
-  //   },
-  //   hashtags: [
-  //     "#html", 
-  //     "#css"
-  //   ],
-  //   image: "/images/project-images/2.png"
-  // },
-  // {
-  //   title: "Webpage with External Data Integration",
-  //   description: "Created a responsive webpage featuring a dynamically generated table using data fetched from JSON and XML files. Implemented CSS Grid for layout, responsive design techniques, and structured data handling to ensure seamless presentation.",
-  //   month: "June",
-  //   year: 2024,
-  //   links: {
-  //     github: "https://github.com/stnwlls/dataintegration",
-  //     live: "/projects/dataintegration/index.html"
-  //   },
-  //   hashtags: [
-  //     "#html", 
-  //     "#css",
-  //     "#json", 
-  //     "#xml"
-  //   ],
-  //   image: "/images/project-images/1.png"
-  // }
 ];
 
 export default projectsData;
