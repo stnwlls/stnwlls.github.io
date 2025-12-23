@@ -1,0 +1,122 @@
+:root {
+  /* colors */
+  --grey-900: #141414;
+  --grey-800: #1F1F1F;
+  --grey-700: #333333;
+  --green: #C4F82A;
+  --white: #FFFFFF;
+  
+  /* font */
+  --font-name: "Inter", sans-serif;
+  
+  --font-lg: 1.5rem;
+  --font-rg: 0.875rem;
+  
+  --font-weight-bold: 700;
+  --font-weight-semibold: 600;
+  --font-weight-regular: 400;
+  
+  --line-height: 1.5;
+  
+  --letter-spacing: 0;
+  
+  /* spacing */
+  --spacing-500: 2.5rem;
+  --spacing-300: 1.5rem;
+  --spacing-200: 1rem;
+  --spacing-150: 0.75rem;
+  --spacing-100: 0.5rem;
+  --spacing-50: 0.25rem;
+  
+  /* border radius */
+  --card-radius: 0.75rem;
+  --image-radius: 50%;
+  --button-radius: 0.5rem;
+}
+
+.text-preset-1 {
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-lg);
+}
+
+.text-preset-2 {
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-rg);
+}
+
+.text-preset-2-bold {
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-rg);
+}
+
+html {
+  font-family: var(--font-name);
+  text-align: center;
+  line-height: var(--line-height);
+  letter-spacing: var(--letter-spacing);
+}
+
+body {
+  background-color: var(--grey-900);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-container {
+  border-radius: var(--card-radius);
+  background-color: var(--grey-800);
+  margin: var(--spacing-300);
+  width: min(100% - (2 * var(--spacing-300)), 24rem);
+}
+
+.content {
+  display: grid;
+  justify-items: center;
+  gap: var(--spacing-300);
+  padding: clamp(var(--spacing-300), calc(1.148rem + 1.5vw), var(--spacing-500));
+}
+
+.image-avatar {
+  border-radius: var(--image-radius);
+  width: 5.5rem;
+}
+
+.title {
+  display: grid;
+  gap: var(--spacing-50);
+  justify-items: center;
+}
+
+.text-name, .text-tagline {
+  color: var(--white);
+}
+
+.text-location {
+  color: var(--green);
+}
+
+.links {
+  display: grid;
+  gap: var(--spacing-200);
+  list-style-type: none;
+  width: 100%;
+}
+
+.button {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  background-color: var(--grey-700);
+  color: var(--white);
+  transition: background-color ease-in-out 0.3s, color ease-in-out 0.3s;
+  border: none;
+  border-radius: var(--button-radius);
+  padding: var(--spacing-150) 0;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: var(--green);
+  color: var(--grey-900);
+}
