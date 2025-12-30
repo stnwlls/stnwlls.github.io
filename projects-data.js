@@ -1,7 +1,117 @@
 const projectsData = [
   {
+    title: "Blog Preview Card Component",
+    description: "Built a responsive blog preview card component using HTML and CSS. The project focused on layout precision, typography, spacing, and hover states to accurately match a provided design reference while maintaining accessibility and visual hierarchy.",
+    month: "December",
+    year: 2025,
+    links: {
+      github: "https://github.com/stnwlls/blog-preview-card-main",
+      live: "/projects/blog-preview-card/index.html",
+    },
+    hashtags: [
+      "#html",
+      "#css",
+      "#uxdesign"
+    ],
+    image: "/projects/blog-preview-card/design-reference/desktop-design.jpg",
+  },
+  {
+    title: "Product Preview Card Component",
+    description: "Developed a responsive product preview card component using HTML and CSS, emphasizing layout structure, responsive imagery, and clear call-to-action styling. The component was designed to closely replicate a supplied UI mockup while maintaining clean, reusable styles.",
+    month: "December",
+    year: 2025,
+    links: {
+      github: "https://github.com/stnwlls/product-preview-card-component-main",
+      live: "/projects/product-preview-card/index.html",
+    },
+    hashtags: [
+      "#html",
+      "#css",
+      "#uxdesign"
+    ],
+    image: "/projects/product-preview-card/design/desktop-design.jpg",
+  },
+  {
+    title: "QR Code Card Component",
+    description: "Created a clean and centered QR code card component using HTML and CSS. This project focused on alignment, spacing, and visual balance, as well as translating a static design reference into a responsive, accessible layout.",
+    month: "December",
+    year: 2025,
+    links: {
+      github: "https://github.com/stnwlls/qr-code-component-main",
+      live: "/projects/qr-code-component/index.html",
+    },
+    hashtags: [
+      "#html",
+      "#css",
+      "#uxdesign"
+    ],
+    image: "/projects/qr-code-component/design-reference/desktop-design.jpg",
+  },
+  {
+    title: "Recipe Page",
+    description: "Built a structured recipe page using HTML and CSS, with an emphasis on content hierarchy, readability, and spacing. The layout translates a design reference into a responsive page that presents information clearly across screen sizes.",
+    month: "December",
+    year: 2025,
+    links: {
+      github: "https://github.com/stnwlls/recipe-page-main",
+      live: "projects/recipe-page/index.html",
+    },
+    hashtags: [
+      "#html",
+      "#css",
+      "#uxdesign"
+    ],
+    image: "/projects/recipe-page/reference/preview.jpg",
+  },
+  {
+    title: "Social Profile Card Component",
+    description: "Developed a responsive social profile card component using HTML and CSS, focusing on layout consistency, typography, and interactive link states. The component replicates a provided design while ensuring clean structure and scalable styling.",
+    month: "December",
+    year: 2025,
+    links: {
+      github: "https://github.com/stnwlls/social-links-profile-main",
+      live: "/projects/social-links-profile-main/index.html",
+    },
+    hashtags: [
+      "#html",
+      "#css",
+      "#uxdesign"
+    ],
+    image: "projects/social-links-profile-main/reference/destkop-design.jpg",
+  },
+  {
+    title: "Concept WordPress Theme Wireframe",
+    description: "A static wireframe concept for a minimalist WordPress theme. The design focuses on layout structure, typography, whitespace, and visual hierarchy to explore how content can be presented with maximum clarity and minimal distraction.",
+    month: "November",
+    year: 2025,
+    links: {
+      figma: "https://www.figma.com/design/BHcFIyPcMHMPT94tvumJmL/WordPress-Theme?node-id=0-1&t=rtI1VvDyXxYD9szP-1",
+      imageLink: "/projects/wordpressthemewireframe.png"
+    },
+    hashtags: [
+      "#figma",
+      "#wireframe",
+      "#uxdesign"
+    ],
+    image: "/images/project-images/wordpresstheme.png",
+  },
+  {
+    title: "Syntax & Coffee - WordPress",
+    description: "Syntax & Coffee is a personal blog where I share my journey as a web developer. Built using WordPress, I handled theme customization, implemented custom CSS, configured plugins, and structured content to support a modern, maintainable blog layout.",
+    month: "August",
+    year: 2025,
+    links: {
+      live: "https://syntaxandcoffee.io"
+    },
+    hashtags: [
+      "#wordpress",
+      "#css"
+    ],
+    image: "/images/project-images/syntaxandcoffee.png",
+  },
+  {
     title: "JavaScript Calculator",
-    description: "Developed a functional calculator application using HTML, CSS, and JavaScript. The interface is designed to replicate the aesthetic of an iPhone calculator, featuring responsive buttons, a sleek layout, and accurate calculations. Key functionalities include basic arithmetic operations, toggle for negative/positive numbers, and error handling for invalid inputs.",
+    description: "A functional calculator application using HTML, CSS, and JavaScript. The interface is designed to replicate the aesthetic of an iPhone calculator, featuring responsive buttons, a sleek layout, and accurate calculations.",
     month: "November",
     year: 2024,
     links: {
@@ -13,24 +123,7 @@ const projectsData = [
       "#css",
       "#javascript"
     ],
-    image: "/images/project-images/11.png",
-  },
-  {
-    title: "Bootstrap Project: Kelp Shake Webpage",
-    description: "Created a fully responsive webpage from scratch using Bootstrap 5 for a fictional brand, Kelp Shake, inspired by SpongeBob. The project includes dynamic components like a carousel, dropdown menus, and custom-designed cards. Leveraging Bootstrap utilities and custom CSS, the webpage showcases a modern, user-friendly design.",
-    month: "November",
-    year: 2024,
-    links: {
-      github: "https://github.com/stnwlls/kelpshake",
-      live: "/projects/kelpshake/index.html"
-    },
-    hashtags: [
-      "#html",
-      "#css",
-      "#bootstrap",
-      "#rwd"
-    ],
-    image: "/images/project-images/10.png"
+    image: "/images/project-images/javascriptcalculator.png",
   },
   {
     title: "Content Audit and Redesign in Figma",
@@ -47,7 +140,7 @@ const projectsData = [
       "#uxdesign",
       "#uidesign"
     ],
-    image: "/images/project-images/9.png"
+    image: "/images/project-images/contentaudit.png"
   },
   {
     title: "A/B Testing Mobile App Prototype in Figma",
@@ -62,10 +155,9 @@ const projectsData = [
       "#figma",
       "#abtesting",
       "#mobileappdesign",
-      "#uxdesign",
-      "#uidesign"
+      "#uxdesign"
     ],
-    image: "/images/project-images/7.png"
+    image: "/images/project-images/abtesting.png"
   },
   {
     title: "Wireframe Design in Figma",
@@ -81,40 +173,7 @@ const projectsData = [
       "#wireframe",
       "#uxdesign"
     ],
-    image: "/images/project-images/5.png"
-  },
-  {
-    title: "Site Map Creation in FigJam",
-    description: "Created an interactive and detailed site map for the Phoenix Rising FC website using FigJam. This project focused on replicating the navigation structure of the site, including all primary navigation links and sub-menu links. It demonstrates proficiency in analyzing website architecture and using collaborative design tools like FigJam for visual organization.",
-    month: "September",
-    year: 2024,
-    links: {
-      imagelink: "/projects/phxrisingSiteMap.jpg",
-      figma: "https://www.figma.com/board/0hYyM6xjyQ0XiGgbP9u8IW/phxrisingfc.com-Site-Map?t=PgeJ28VkPvXK8PiC-1"
-    },
-    hashtags: [
-      "#figma",
-      "#sitemap",
-      "#uxdesign"
-    ],
-    image: "/images/project-images/4.jpg"
-  },  
-  {
-    title: "Three Page Website with CSS Grid",
-    description: "Completed a three-page website demonstrating proficiency in HTML and CSS. The project emphasized CSS Grid for layout, responsive web design (RWD) principles, and reusable external stylesheets. Key features include a responsive Bootstrap navigation bar, functional form, embedded video, and styled table.",
-    month: "July",
-    year: 2024,
-    links: {
-      github: "https://github.com/stnwlls/threepagesite",
-      live: "/projects/threepagesite/index.html"
-    },
-    hashtags: [
-      "#html", 
-      "#css", 
-      "#bootstrap", 
-      "#rwd"
-    ],
-    image: "/images/project-images/3.png"
+    image: "/images/project-images/wireframe.png"
   },
 ];
 
