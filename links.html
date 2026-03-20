@@ -35,7 +35,7 @@
   
   <!-- Main Links Section -->
   <div class="links-container">
-    <a href="/" class="link-card home-link-card">
+    <a href="/" class="link-card">
       <span class="link-icon"><i class="bi bi-house"></i></span>
       <span class="link-text">austinwells.dev</span>
     </a>
@@ -47,7 +47,7 @@
       <span class="link-text">Portfolio</span>
     </a>
     
-    <a href="resume.pdf" target="_blank" class="link-card">
+   <a href="/resume" target="_blank" class="link-card">
       <span class="link-icon"><i class="bi bi-file-person"></i></span>
       <span class="link-text">Resume</span>
     </a>
@@ -56,23 +56,26 @@
       <span class="link-icon"><i class="bi bi-book"></i></span>
       <span class="link-text">Syntax & Coffee</span>
     </a>
+
+    <a href="/contact" class="link-card">
+      <span class="link-icon"><i class="bi bi-chat-dots"></i></span>
+      <span class="link-text">Contact</span>
+    </a>
   </div>
   
   <div class="spacer"></div>
   
   <script>
-    // Add subtle animation to link cards on page load
     document.addEventListener('DOMContentLoaded', function() {
-      const cards = document.querySelectorAll('.link-card, .home-link-card');
-      cards.forEach((card, index) => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(20px)';
-        
-        setTimeout(() => {
-          card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-          card.style.opacity = '1';
-          card.style.transform = 'translateY(0)';
-        }, 300 * index);
+      const cards = document.querySelectorAll('.link-card');
+      document.body.classList.add('js-enabled');
+
+      requestAnimationFrame(() => {
+        cards.forEach((card, index) => {
+          setTimeout(() => {
+            card.classList.add('is-visible');
+          }, 200 * index);
+        });
       });
     });
   </script>
