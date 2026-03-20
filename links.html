@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>austinwells.dev | links</title>
+  <link rel="stylesheet" href="links.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300..700&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+  <div class="profile-container">
+    <img src="images/austin.png" alt="Austin Wells" class="profile-photo">
+    <h1 class="profile-name">Austin Wells</h1>
+    <p class="profile-title">Web Developer</p>
+  </div>
+  
+  <!-- Social Icons Section -->
+  <div class="social-icons-container">
+    <a href="mailto:hello@austinwells.dev" class="social-icon">
+      <i class="bi bi-envelope"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/austinhwells" target="_blank" class="social-icon">
+      <i class="bi bi-linkedin"></i>
+    </a>
+    <a href="https://github.com/stnwlls" target="_blank" class="social-icon">
+      <i class="bi bi-github"></i>
+    </a>
+    <a href="https://open.spotify.com/user/31xdal64rzuaum2mtd6sa2eg3o4i" target="_blank" class="social-icon">
+      <i class="bi bi-spotify"></i>
+    </a>
+  </div>
+  
+  <!-- Main Links Section -->
+  <div class="links-container">
+    <a href="index.html" class="link-card home-link-card">
+      <span class="link-icon"><i class="bi bi-house"></i></span>
+      <span class="link-text">austinwells.dev</span>
+    </a>
+    
+    <div class="separator"></div>
+    
+    <a href="portfolio.html" class="link-card">
+      <span class="link-icon"><i class="bi bi-briefcase"></i></span>
+      <span class="link-text">Portfolio</span>
+    </a>
+    
+    <a href="resume.pdf" target="_blank" class="link-card">
+      <span class="link-icon"><i class="bi bi-file-person"></i></span>
+      <span class="link-text">Resume</span>
+    </a>
+    
+    <a href="https://syntaxandcoffee.io/" target="_blank" class="link-card">
+      <span class="link-icon"><i class="bi bi-book"></i></span>
+      <span class="link-text">Syntax & Coffee</span>
+    </a>
+  </div>
+  
+  <div class="spacer"></div>
+  
+  <script>
+    // Add subtle animation to link cards on page load
+    document.addEventListener('DOMContentLoaded', function() {
+      const cards = document.querySelectorAll('.link-card, .home-link-card');
+      cards.forEach((card, index) => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        
+        setTimeout(() => {
+          card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0)';
+        }, 300 * index);
+      });
+    });
+  </script>
+</body>
+</html>
