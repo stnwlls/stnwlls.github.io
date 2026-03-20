@@ -22,6 +22,10 @@ body {
   background-attachment: fixed;
   font-family: var(--font-jura);
   color: var(--color-lightblue);
+  padding-top: 60px;
+  padding-bottom: 0;
+  min-height: 100vh;
+  margin: 0;
 }
 
 .topnav {
@@ -102,41 +106,7 @@ body {
   color: var(--color-white);
 }
 
-.hello {
-  width: 60%;
-  margin: 50vh auto 0 auto;
-}
 
-.hello-world p, .name h1, .role > h1 {
-  padding: 0;
-  margin: 0;
-}
-
-.quicklinks {
-  display: flex;
-  flex-wrap: wrap;
-  width: 60%;
-  margin: 1vh auto 0 auto;
-}
-
-.quicklinks a {
-  color: var(--color-lightblue);
-  text-decoration: none;
-  margin: 0;
-  padding: 0;
-}
-
-.quicklinks a:nth-child(2),
-.quicklinks a:nth-child(3),
-.quicklinks a:nth-child(4) {
-  margin-left: 1rem;
-}
-
-.quicklinks a:hover {
-  cursor: pointer;
-  color: var(--color-white);
-  transition: color 0.5s;
-}
 
 /* about */
 
@@ -928,3 +898,171 @@ body {
     content: none !important;
   }
 }
+
+.featured-projects,
+.skills {
+  margin: 4rem auto;
+  width: 80%;
+  max-width: 800px;
+  text-align: center;
+}
+
+.skills {
+  margin-bottom: 6rem;
+}
+
+.featured-projects h2,
+.skills h2 {
+  margin-bottom: 2rem;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.project-card {
+  padding: 1.5rem;
+  border: 1px solid rgba(138, 178, 212, 0.3);
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--color-lightblue);
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  border-color: var(--color-lightblue);
+  background-color: rgba(138, 178, 212, 0.05);
+  color: var(--color-white);
+}
+
+.project-card h3 {
+  margin-top: 0;
+}
+
+.project-card p {
+  margin-bottom: 0;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.tag {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--color-lightblue);
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  max-width: 800px;
+  margin: 30vh auto 0 auto;
+  opacity: 1;
+  text-align: center;
+}
+
+.hero-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-content .hello-world p, 
+.hero-content .name h1, 
+.hero-content .role > h1 {
+  padding: 0;
+  margin: 0;
+}
+
+.hero-content .intro {
+  margin: 1.5rem 0;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+.btn {
+  padding: 0.875rem 1.5rem;
+  display: inline-block;
+  background-color: transparent;
+  border: 1px solid var(--color-lightblue);
+  color: var(--color-lightblue);
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  background-color: var(--color-lightblue);
+  color: var(--color-black);
+  cursor: pointer;
+}
+
+.btn.secondary {
+  border-color: transparent;
+}
+
+.btn.secondary:hover {
+  background-color: var(--color-lightblue);
+  color: var(--color-black);
+}
+
+/* Reduce gap as screen gets smaller */
+@media (max-width: 1024px) {
+  .cta-buttons {
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .cta-buttons {
+    gap: 0.5rem;
+  }
+}
+
+/* Switch to column layout when buttons would wrap */
+@media (max-width: 980px) {
+  .hero {
+    width: 70%;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+  .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    margin-top: 25vh;
+    width: 85%;
+  }
+}
+

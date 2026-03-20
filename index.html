@@ -42,62 +42,175 @@
     </ul>
   </nav>
   
-  <section class="hello">
-    <div class="hello-world">
-      <p></p>
-    </div>
-    <div class="name">
-      <h1></h1>
-    </div>
-    <div class="role">
-      <h1></h1>
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hello-world">
+        <p></p>
+      </div>
+      <div class="name">
+        <h1></h1>
+      </div>
+      <div class="role">
+        <h1></h1>
+      </div>
+      <div class="intro" style="opacity: 0; transition: opacity 1s ease;">
+        <p>I create modern, responsive websites and web applications with clean, efficient code.</p>
+      </div>
+      <div class="cta-buttons" style="text-align: center;">
+        <a href="/portfolio" class="btn">View My Work</a>
+        <a href="/resume" class="btn secondary">My Resume</a>
+        <a href="/about" class="btn secondary">About Me</a>
+        <a href="/contact" class="btn secondary">Get In Touch</a>
+      </div>
     </div>
   </section>
 
-  <section class="quicklinks" style="opacity: 0; transition: opacity 1.5s;">
-    <!-- <a href="/about">>> meet me</a> -->
-    <a href="/portfolio">>> my work</a>
-    <a href="/resume">>> my resume</a>
-    <a href="/contact">>> say hello</a>
-  </section>
-  
   <script>
-    const elements = [
-    { element: document.querySelector('.hello-world p'), text: 'hello, world' },
-    { element: document.querySelector('.name h1'), text: "i'm austin" },
-    { element: document.querySelector('.role h1'), text: 'front-end web developer' }
-    ];
-    
-    function typeText(elementObj, callback) {
-      const { element, text } = elementObj;
-      let i = 0;
+    let animationHasRun = false;
+
+    function initPage() {
+      if (animationHasRun) return;
+      animationHasRun = true;
+
+      const topNav = document.querySelector('.topnav');
+      const bottomNav = document.querySelector('.navbar');
+      const bottomNavItems = Array.from(document.querySelectorAll('.navbar li'));
+      const ctaButtons = Array.from(document.querySelectorAll('.cta-buttons .btn'));
+
+      // Keep nav bars hidden until hero typing finishes.
+      [topNav, bottomNav].forEach((nav) => {
+        if (!nav) return;
+        nav.style.opacity = 0;
+        nav.style.transition = 'opacity 1s ease';
+      });
+
+      // Prepare bottom nav items for staggered fly-in reveal.
+      bottomNavItems.forEach((item) => {
+        item.style.opacity = 0;
+        item.style.transform = 'translateY(16px)';
+      });
+
+      // Hide CTA buttons initially so they can reveal one by one.
+      ctaButtons.forEach((button) => {
+        button.style.opacity = 0;
+        button.style.transform = 'translateY(8px)';
+        button.style.transition = 'opacity 0.9s ease, transform 0.9s ease';
+      });
+
+      const greetingElements = [
+      { element: document.querySelector('.hello-world p'), text: 'hello, world' },
+      { element: document.querySelector('.name h1'), text: "i'm austin" },
+      { element: document.querySelector('.role h1'), text: 'front-end web developer' }
+      ];
       
-      function addChar() {
-        if (i < text.length) {
-          element.textContent += text[i];
-          i++;
-          setTimeout(addChar, 60);
-        } else if (callback) {
-          callback();
+      // Clear all text first to prevent duplication
+      greetingElements.forEach(({ element }) => {
+        if (element) element.textContent = '';
+      });
+      
+      function typeText(elementObj, callback) {
+        const { element, text } = elementObj;
+        if (!element) return;
+        let i = 0;
+        
+        function addChar() {
+          if (i < text.length) {
+            element.textContent += text[i];
+            i++;
+            setTimeout(addChar, 60);
+          } else if (callback) {
+            callback();
+          }
+        }
+        
+        addChar();
+      }
+      
+      function sequentialTyping(i = 0) {
+        if (i < greetingElements.length) {
+          typeText(greetingElements[i], () => sequentialTyping(i + 1));
+        } else {
+          // All greeting elements typed - now show everything else in hero section
+          showHeroContent();
         }
       }
       
-      addChar();
-    }
-    
-    function sequentialTyping(i = 0) {
-      if (i < elements.length) {
-        typeText(elements[i], () => sequentialTyping(i + 1));
+      sequentialTyping();
+
+      function showHeroContent() {
+        // Show the intro text and CTA buttons after typing completes
+        setTimeout(() => {
+          const intro = document.querySelector('.intro');
+          if (intro) intro.style.opacity = 1;
+
+          if (topNav) topNav.style.opacity = 1;
+          if (bottomNav) bottomNav.style.opacity = 1;
+
+        }, 300);
+        
+        setTimeout(() => {
+          ctaButtons.forEach((button, index) => {
+            setTimeout(() => {
+              button.style.opacity = 1;
+              button.style.transform = 'translateY(0)';
+            }, index * 220);
+          });
+        }, 1000);
+
+        // Make bottom nav items fly in after all hero animations finish.
+        const ctaSequenceDuration = 1000 + Math.max(0, ctaButtons.length - 1) * 220 + 900;
+        setTimeout(() => {
+          bottomNavItems.forEach((item, index) => {
+            setTimeout(() => {
+              item.animate(
+                [
+                  { opacity: 0, transform: 'translateY(18px)' },
+                  { opacity: 0.6, transform: 'translateY(-2px)' },
+                  { opacity: 1, transform: 'translateY(0)' }
+                ],
+                {
+                  duration: 1100,
+                  easing: 'cubic-bezier(0.22, 1, 0.36, 1)',
+                  fill: 'forwards'
+                }
+              );
+            }, index * 180);
+          });
+        }, ctaSequenceDuration + 350);
+
+        // Run a subtle nav wave starting 5s later, then repeat every 10s.
+        const runNavWave = () => {
+          bottomNavItems.forEach((item, index) => {
+            setTimeout(() => {
+              item.animate(
+                [
+                  { transform: 'translateY(0)' },
+                  { transform: 'translateY(-5px)' },
+                  { transform: 'translateY(0)' }
+                ],
+                {
+                  duration: 650,
+                  easing: 'ease-in-out'
+                }
+              );
+            }, index * 110);
+          });
+        };
+
+        setTimeout(() => {
+          runNavWave();
+          setInterval(runNavWave, 10000);
+        }, 20000);
+
       }
     }
-    
-    sequentialTyping();
 
-    const quicklinks = document.querySelector('.quicklinks');
-
-    setTimeout(() => {
-      quicklinks.style.opacity = 1;
-    }, 3200);
+    // Wait for DOM to be fully loaded - only run once
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initPage, { once: true });
+    } else {
+      initPage();
+    }
   </script>
 </body>
 </html>
