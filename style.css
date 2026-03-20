@@ -1104,7 +1104,7 @@ body {
 @supports (-webkit-touch-callout: none) {
   @media (max-width: 430px) {
     .hero {
-      margin-top: 1.35rem;
+      margin-top: 7rem;
     }
   }
 }
