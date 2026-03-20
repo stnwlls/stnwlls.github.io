@@ -102,6 +102,28 @@ body {
   transition: color 0.5s;
 }
 
+.navbar li.wave-bump {
+  animation: navWaveBump 650ms ease-in-out;
+}
+
+@keyframes navWaveBump {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .navbar li.wave-bump {
+    animation: none;
+  }
+}
+
 .active a {
   color: var(--color-white);
 }

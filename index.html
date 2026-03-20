@@ -21,7 +21,7 @@
   <style></style>
 </head>
 <body>
-  <nav class="topnav">
+  <nav class="topnav" style="opacity: 0;">
     <a href="/" class="home">austinwells.dev</a>
     
     <section class="sites">
@@ -33,7 +33,7 @@
     </section>  
   </nav>
   
-  <nav class="navbar">
+  <nav class="navbar" style="opacity: 0;">
     <ul>
       <li class="active"><a href="/">home</a></li>
       <li><a href="/about">about</a></li>
@@ -88,6 +88,7 @@
       bottomNavItems.forEach((item) => {
         item.style.opacity = 0;
         item.style.transform = 'translateY(16px)';
+        item.style.transition = 'opacity 1.1s cubic-bezier(0.22, 1, 0.36, 1), transform 1.1s cubic-bezier(0.22, 1, 0.36, 1)';
       });
 
       // Hide CTA buttons initially so they can reveal one by one.
@@ -162,37 +163,19 @@
         setTimeout(() => {
           bottomNavItems.forEach((item, index) => {
             setTimeout(() => {
-              item.animate(
-                [
-                  { opacity: 0, transform: 'translateY(18px)' },
-                  { opacity: 0.6, transform: 'translateY(-2px)' },
-                  { opacity: 1, transform: 'translateY(0)' }
-                ],
-                {
-                  duration: 1100,
-                  easing: 'cubic-bezier(0.22, 1, 0.36, 1)',
-                  fill: 'forwards'
-                }
-              );
+              item.style.opacity = 1;
+              item.style.transform = 'translateY(0)';
             }, index * 180);
           });
         }, ctaSequenceDuration + 350);
 
-        // Run a subtle nav wave starting 5s later, then repeat every 10s.
+        // Run a subtle nav wave starting 20s later, then repeat every 10s.
         const runNavWave = () => {
           bottomNavItems.forEach((item, index) => {
             setTimeout(() => {
-              item.animate(
-                [
-                  { transform: 'translateY(0)' },
-                  { transform: 'translateY(-5px)' },
-                  { transform: 'translateY(0)' }
-                ],
-                {
-                  duration: 650,
-                  easing: 'ease-in-out'
-                }
-              );
+              item.classList.remove('wave-bump');
+              void item.offsetWidth;
+              item.classList.add('wave-bump');
             }, index * 110);
           });
         };
