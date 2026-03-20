@@ -709,9 +709,6 @@ body {
     font-size: 1.45rem;
   }
   
-  .navbar {
-    margin-top: 50px;
-  }
 }
 
 /* Tablet Portrait */
@@ -1082,16 +1079,33 @@ body {
 }
 
 @media (max-width: 768px) {
+  body {
+    padding-top: 40px;
+  }
+
   .hero {
-    margin-top: 14vh;
+    margin-top: 10rem;
     width: 85%;
   }
 }
 
 @media (max-width: 430px) {
+  body {
+    padding-top: 34px;
+  }
+
   .hero {
-    margin-top: 10vh;
+    margin-top: 7rem;
     width: 90%;
+  }
+}
+
+/* iPhone Safari can over-report vh in some UI states; force tighter hero spacing. */
+@supports (-webkit-touch-callout: none) {
+  @media (max-width: 430px) {
+    .hero {
+      margin-top: 1.35rem;
+    }
   }
 }
 
