@@ -1,0 +1,18 @@
+# Redirects for clean URLs on GitHub Pages
+
+# Main pages
+/index.html  /  200
+/about.html  /about  200
+/portfolio.html  /portfolio  200
+/contact.html  /contact  200
+
+# Project pages
+/projects/blog-preview-card/index.html  /projects/blog-preview-card  200
+/projects/product-preview-card/index.html  /projects/product-preview-card  200
+/projects/qr-code-component/index.html  /projects/qr-code-component  200
+/projects/recipe-page/index.html  /projects/recipe-page  200
+/projects/social-links-profile-main/index.html  /projects/social-links-profile-main  200
+/projects/jscalculator/calculator.html  /projects/jscalculator  200
+
+# Fallback for SPA-style routing
+/*  /index.html  200
