@@ -1083,8 +1083,15 @@ body {
 
 @media (max-width: 768px) {
   .hero {
-    margin-top: 25vh;
+    margin-top: 14vh;
     width: 85%;
+  }
+}
+
+@media (max-width: 430px) {
+  .hero {
+    margin-top: 10vh;
+    width: 90%;
   }
 }
 
