@@ -519,6 +519,22 @@ body {
   margin: 0;
 }
 
+.resume-entry-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.resume-entry-row > span:first-child {
+  min-width: 0;
+}
+
+.resume-entry-side {
+  flex-shrink: 0;
+  text-align: right;
+}
+
 .resume-entry-meta {
   margin: 0.35rem 0 0.75rem 0;
 }
@@ -534,12 +550,6 @@ body {
 .resume-company-meta {
   margin: 0.35rem 0 0 0;
   opacity: 0.9;
-}
-
-.resume-company-note {
-  margin: 0.3rem 0 0 0;
-  font-size: 0.9rem;
-  opacity: 0.85;
 }
 
 .resume-role-timeline {
@@ -612,16 +622,6 @@ body {
   padding: 0.8rem 0.9rem;
   border: 1px solid rgba(138, 178, 212, 0.45);
   border-radius: 0.5rem;
-}
-
-.resume-highlights-block {
-  margin-top: 1.25rem;
-}
-
-.resume-highlights-title {
-  margin: 0 0 0.65rem 0;
-  font-size: 1.1rem;
-  text-transform: lowercase;
 }
 
 .resume-cert-card-title {
@@ -905,10 +905,6 @@ body {
     padding-top: 0;
   }
 
-  .resume-highlights-block {
-    display: none;
-  }
-
   .resume-container > .resume-card:nth-of-type(5) .resume-entry:nth-of-type(n+4) {
     display: none;
   }
@@ -1108,4 +1104,3 @@ body {
     }
   }
 }
-
