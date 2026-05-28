@@ -118,6 +118,10 @@ class PortfolioProjects {
     image.src = project.image || 'placeholder.jpg';
     image.alt = project.title;
     image.className = 'project-image';
+    if (project.imageFit === 'contain') {
+      image.classList.add('project-image-contain');
+    }
+    image.loading = 'lazy';
     imageContainer.appendChild(image);
 
     // Content Container
@@ -129,8 +133,29 @@ class PortfolioProjects {
     header.className = 'project-header';
 
     const title = document.createElement('h2');
-    title.textContent = project.title;
     title.className = 'project-title';
+
+    const primaryLink = project.links?.live || project.links?.figma;
+
+    if (primaryLink) {
+      const titleLink = document.createElement('a');
+      titleLink.href = primaryLink;
+      titleLink.textContent = project.title;
+      titleLink.className = 'project-title-link';
+      titleLink.title = project.links?.figma && !project.links?.live
+        ? `View ${project.title} in Figma`
+        : `View ${project.title} demo`;
+      titleLink.setAttribute('aria-label', titleLink.title);
+
+      if (!primaryLink.startsWith('/')) {
+        titleLink.target = '_blank';
+        titleLink.rel = 'noreferrer';
+      }
+
+      title.appendChild(titleLink);
+    } else {
+      title.textContent = project.title;
+    }
 
     const links = document.createElement('div');
     links.className = 'project-links';
@@ -140,6 +165,9 @@ class PortfolioProjects {
       const githubLink = document.createElement('a');
       githubLink.href = project.links.github;
       githubLink.target = '_blank';
+      githubLink.rel = 'noreferrer';
+      githubLink.title = `View ${project.title} on GitHub`;
+      githubLink.setAttribute('aria-label', `View ${project.title} on GitHub`);
       githubLink.innerHTML = '<i class="bi bi-github"></i>';
       githubLink.className = 'project-link-github';
       links.appendChild(githubLink);
@@ -149,6 +177,9 @@ class PortfolioProjects {
       const liveLink = document.createElement('a');
       liveLink.href = project.links.live;
       liveLink.target = '_blank';
+      liveLink.rel = 'noreferrer';
+      liveLink.title = `View ${project.title} demo`;
+      liveLink.setAttribute('aria-label', `View ${project.title} demo`);
       liveLink.innerHTML = '<i class="bi bi-globe"></i>';
       liveLink.className = 'project-link-live';
       links.appendChild(liveLink);
@@ -158,6 +189,9 @@ class PortfolioProjects {
       const youtubeLink = document.createElement('a');
       youtubeLink.href = project.links.youtube;
       youtubeLink.target = '_blank';
+      youtubeLink.rel = 'noreferrer';
+      youtubeLink.title = `Watch ${project.title} video`;
+      youtubeLink.setAttribute('aria-label', `Watch ${project.title} video`);
       youtubeLink.innerHTML = '<i class="bi bi-youtube"></i>';
       youtubeLink.className = 'project-link-youtube';
       links.appendChild(youtubeLink);
@@ -167,6 +201,9 @@ class PortfolioProjects {
       const figmaLink = document.createElement('a');
       figmaLink.href = project.links.figma;
       figmaLink.target = '_blank';
+      figmaLink.rel = 'noreferrer';
+      figmaLink.title = `View ${project.title} in Figma`;
+      figmaLink.setAttribute('aria-label', `View ${project.title} in Figma`);
       figmaLink.innerHTML = '<i class="bi bi-vector-pen"></i>';
       figmaLink.className = 'project-link-figma';
       links.appendChild(figmaLink);
@@ -176,6 +213,9 @@ class PortfolioProjects {
       const adobeXDLink = document.createElement('a');
       adobeXDLink.href = project.links.adobeXD;
       adobeXDLink.target = '_blank';
+      adobeXDLink.rel = 'noreferrer';
+      adobeXDLink.title = `View ${project.title} in Adobe XD`;
+      adobeXDLink.setAttribute('aria-label', `View ${project.title} in Adobe XD`);
       adobeXDLink.innerHTML = '<i class="bi bi-vector-pen"></i>';
       adobeXDLink.className = 'project-link-adobeXD';
       links.appendChild(adobeXDLink);
@@ -185,6 +225,9 @@ class PortfolioProjects {
       const imagelink = document.createElement('a');
       imagelink.href = project.links.imagelink;
       imagelink.target = '_blank';
+      imagelink.rel = 'noreferrer';
+      imagelink.title = `View ${project.title} image`;
+      imagelink.setAttribute('aria-label', `View ${project.title} image`);
       imagelink.innerHTML = '<i class="bi bi-image"></i>';
       imagelink.className = 'project-link-imagelink';
       links.appendChild(imagelink);
@@ -193,12 +236,6 @@ class PortfolioProjects {
     header.appendChild(title);
     header.appendChild(links);
     content.appendChild(header);
-
-    // Year Label
-    const yearLabel = document.createElement('span');
-    yearLabel.textContent = `${project.month} ${project.year}`;
-    yearLabel.className = 'project-year-label';
-    content.appendChild(yearLabel);
 
     // Description
     const description = document.createElement('p');

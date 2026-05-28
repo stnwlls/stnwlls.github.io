@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Amazon Storefront Checkout</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles/shared/general.css">
+  <link rel="stylesheet" href="styles/shared/storefront-header.css">
+  <link rel="stylesheet" href="styles/pages/storefront.css">
+</head>
+<body>
+  <div class="storefront-header">
+    <div class="storefront-header-left-section">
+      <a href="index.html" class="header-link storefront-logo-link">
+        <span class="storefront-logo">Amazon</span>
+        <span class="storefront-mobile-logo">A</span>
+      </a>
+    </div>
+    
+    <div class="storefront-header-middle-section">
+      <input class="search-bar" type="text" placeholder="Search">
+      
+      <button class="search-button">
+        <img class="search-icon" src="images/icons/search-icon.png">
+      </button>
+    </div>
+    
+    <div class="storefront-header-right-section">
+      <a class="orders-link header-link" href="orders.html">
+        <span class="returns-text">Returns</span>
+        <span class="orders-text">& Orders</span>
+      </a>
+      
+      <a class="cart-link header-link" href="checkout.html">
+        <img class="cart-icon" src="images/icons/cart-icon.png">
+        <div class="cart-quantity js-cart-quantity">0</div>
+        <div class="cart-text">Cart</div>
+      </a>
+    </div>
+  </div>
+  
+  <div class="main">
+    <div class="products-grid js-products-grid">
+    </div>
+  </div>
+
+  <script type="module" src="scripts/storefront.js"></script>
+</body>
+</html>

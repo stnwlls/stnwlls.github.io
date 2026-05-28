@@ -1,84 +1,72 @@
 const projectsData = [
-  // {
-  //   title: "Blog Preview Card Component",
-  //   description: "Built a responsive blog preview card component using HTML and CSS. The project focused on layout precision, typography, spacing, and hover states to accurately match a provided design reference while maintaining accessibility and visual hierarchy.",
-  //   month: "December",
-  //   year: 2025,
-  //   links: {
-  //     github: "https://github.com/stnwlls/blog-preview-card-main",
-  //     live: "/projects/blog-preview-card/index.html",
-  //   },
-  //   hashtags: [
-  //     "#html",
-  //     "#css",
-  //     "#uxdesign"
-  //   ],
-  //   image: "/projects/blog-preview-card/design-reference/desktop-design.jpg",
-  // },
-  // {
-  //   title: "Product Preview Card Component",
-  //   description: "Developed a responsive product preview card component using HTML and CSS, emphasizing layout structure, responsive imagery, and clear call-to-action styling. The component was designed to closely replicate a supplied UI mockup while maintaining clean, reusable styles.",
-  //   month: "December",
-  //   year: 2025,
-  //   links: {
-  //     github: "https://github.com/stnwlls/product-preview-card-component-main",
-  //     live: "/projects/product-preview-card/index.html",
-  //   },
-  //   hashtags: [
-  //     "#html",
-  //     "#css",
-  //     "#uxdesign"
-  //   ],
-  //   image: "/projects/product-preview-card/design/desktop-design.jpg",
-  // },
-  // {
-  //   title: "QR Code Card Component",
-  //   description: "Created a clean and centered QR code card component using HTML and CSS. This project focused on alignment, spacing, and visual balance, as well as translating a static design reference into a responsive, accessible layout.",
-  //   month: "December",
-  //   year: 2025,
-  //   links: {
-  //     github: "https://github.com/stnwlls/qr-code-component-main",
-  //     live: "/projects/qr-code-component/index.html",
-  //   },
-  //   hashtags: [
-  //     "#html",
-  //     "#css",
-  //     "#uxdesign"
-  //   ],
-  //   image: "/projects/qr-code-component/design-reference/desktop-design.jpg",
-  // },
-  // {
-  //   title: "Recipe Page",
-  //   description: "Built a structured recipe page using HTML and CSS, with an emphasis on content hierarchy, readability, and spacing. The layout translates a design reference into a responsive page that presents information clearly across screen sizes.",
-  //   month: "December",
-  //   year: 2025,
-  //   links: {
-  //     github: "https://github.com/stnwlls/recipe-page-main",
-  //     live: "projects/recipe-page/index.html",
-  //   },
-  //   hashtags: [
-  //     "#html",
-  //     "#css",
-  //     "#uxdesign"
-  //   ],
-  //   image: "/projects/recipe-page/reference/preview.jpg",
-  // },
-  // {
-  //   title: "Social Profile Card Component",
-  //   description: "Developed a responsive social profile card component using HTML and CSS, focusing on layout consistency, typography, and interactive link states. The component replicates a provided design while ensuring clean structure and scalable styling.",
-  //   month: "December",
-  //   year: 2025,
-  //   links: {
-  //     github: "https://github.com/stnwlls/social-links-profile-main",
-  //     live: "/projects/social-links-profile-main/index.html",
-  //   },
-  //   hashtags: [
-  //     "#html",
-  //     "#css",
-  //     "#uxdesign"
-  //   ],
-  //   image: "projects/social-links-profile-main/reference/destkop-design.jpg",
-  // },
+  {
+    title: "Python Construction GUI",
+    description: "A Python desktop application for construction service browsing, quote requests, manager workflows, service records, tax calculations, threaded logging, file persistence, and search/sort utilities.",
+    month: "May",
+    year: 2026,
+    links: {
+      github: "https://github.com/stnwlls/python-construction-gui",
+      live: "/projects/python-construction-gui/index.html"
+    },
+    hashtags: [
+      "#python",
+      "#gui",
+      "#oop",
+      "#fileio"
+    ],
+    image: "/projects/python-construction-gui/assets/construction-gui.png",
+    imageFit: "contain",
+  },
+  {
+    title: "OrderApp iOS",
+    description: "A UIKit restaurant ordering app that fetches menu categories and items, decodes JSON responses, loads images asynchronously, manages an order cart, submits orders, and displays confirmation details.",
+    month: "October",
+    year: 2025,
+    links: {
+      github: "https://github.com/stnwlls/orderapp-ios",
+      live: "/projects/orderapp/index.html"
+    },
+    hashtags: [
+      "#swift",
+      "#ios",
+      "#uikit",
+      "#api"
+    ],
+    image: "/projects/orderapp/assets/order-app.png",
+  },
+  {
+    title: "Color Pop iOS Game",
+    description: "A SpriteKit color-matching game with randomized prompts, touch-based balloon selection, score tracking, countdown timing, bonus time rewards, particle effects, and high-score persistence.",
+    month: "November",
+    year: 2025,
+    links: {
+      github: "https://github.com/stnwlls/color-pop-ios",
+      live: "/projects/color-pop/index.html"
+    },
+    hashtags: [
+      "#swift",
+      "#ios",
+      "#spritekit"
+    ],
+    image: "/projects/color-pop/assets/color-pop.png",
+  },
+  {
+    title: "Amazon Storefront Checkout",
+    description: "A JavaScript Amazon-style storefront with a product grid, cart state, localStorage persistence, delivery-option selection, dynamic checkout totals, tax calculation, local product data, and browser-based tests.",
+    month: "December",
+    year: 2024,
+    links: {
+      github: "https://github.com/stnwlls/amazon-storefront-checkout",
+      live: "/projects/storefront-checkout/index.html"
+    },
+    hashtags: [
+      "#javascript",
+      "#html",
+      "#css",
+      "#ecommerce"
+    ],
+    image: "/images/project-images/amazon-storefront.png",
+  },
   {
     title: "Concept WordPress Theme Wireframe",
     description: "A static wireframe concept for a minimalist WordPress theme. The design focuses on layout structure, typography, whitespace, and visual hierarchy to explore how content can be presented with maximum clarity and minimal distraction.",
@@ -86,7 +74,7 @@ const projectsData = [
     year: 2025,
     links: {
       figma: "https://www.figma.com/design/BHcFIyPcMHMPT94tvumJmL/WordPress-Theme?node-id=0-1&t=rtI1VvDyXxYD9szP-1",
-      imageLink: "/projects/wordpressthemewireframe.png"
+      imagelink: "/projects/wordpressthemewireframe.png"
     },
     hashtags: [
       "#figma",
@@ -109,22 +97,6 @@ const projectsData = [
     ],
     image: "/images/project-images/syntaxandcoffee.png",
   },
-  // {
-  //   title: "JavaScript Calculator",
-  //   description: "A functional calculator application using HTML, CSS, and JavaScript. The interface is designed to replicate the aesthetic of an iPhone calculator, featuring responsive buttons, a sleek layout, and accurate calculations.",
-  //   month: "November",
-  //   year: 2024,
-  //   links: {
-  //     github: "https://github.com/stnwlls/JSCalculator",
-  //     live: "/projects/jscalculator/calculator.html"
-  //   },
-  //   hashtags: [
-  //     "#html",
-  //     "#css",
-  //     "#javascript"
-  //   ],
-  //   image: "/images/project-images/javascriptcalculator.png",
-  // },
   {
     title: "Content Audit and Redesign in Figma",
     description: "Conducted a content audit and full redesign of the Memorial Health Bariatric Surgery page using Figma. The redesign focused on reorganizing content for improved user experience and readability. Key changes included consolidating large blocks of text into smaller, scannable sections with clear headings, and integrating more engaging visuals.",
